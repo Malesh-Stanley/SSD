@@ -23,17 +23,73 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
-                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-outline-light ms-2" href="portal.html">Member Login</a></li>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">Our Story</a></li>
+                            <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                            <li><a class="dropdown-item" href="constitution.html">Constitution</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Membership
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="membership.html">Join Us</a></li>
+                            <li><a class="dropdown-item" href="benefits.html">Benefits</a></li>
+                            <li><a class="dropdown-item" href="alumni.html">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="academic.html">Academic Support</a></li>
+                            <li><a class="dropdown-item" href="scholarships.html">Scholarships</a></li>
+                            <li><a class="dropdown-item" href="downloads.html">Downloads</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
+
+                <!-- Right Side Items -->
+                <div class="d-flex align-items-center">
+                    <!-- Search Form -->
+                    <form class="search-form me-3">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Search...">
+                            <button class="btn btn-outline-light" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Member Login -->
+                    <a href="portal.html" class="nav-link member-login-btn">
+                        <i class="fas fa-user me-1"></i> Member Login
+                    </a>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="btn btn-link nav-link ms-2" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
