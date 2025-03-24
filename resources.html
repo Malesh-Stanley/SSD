@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - BUSSSA</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/image.png" alt="BUSSSA Logo" height="40" class="me-2">
+                <span>BUSSSA</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-info-circle me-1"></i> About Us
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="about.html">
+                                <i class="fas fa-book-open me-2"></i> Our Story
+                            </a></li>
+                            <li><a class="dropdown-item" href="team.html">
+                                <i class="fas fa-users me-2"></i> Our Team
+                            </a></li>
+                            <li><a class="dropdown-item" href="constitution.html">
+                                <i class="fas fa-file-alt me-2"></i> Constitution
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-friends me-1"></i> Membership
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="membership.html">
+                                <i class="fas fa-user-plus me-2"></i> Join Us
+                            </a></li>
+                            <li><a class="dropdown-item" href="benefits.html">
+                                <i class="fas fa-gift me-2"></i> Benefits
+                            </a></li>
+                            <li><a class="dropdown-item" href="alumni.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Alumni
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">
+                            <i class="fas fa-calendar-alt me-1"></i> Events
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-book-reader me-1"></i> Resources
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item active" href="academic.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Academic Support
+                            </a></li>
+                            <li><a class="dropdown-item" href="scholarships.html">
+                                <i class="fas fa-award me-2"></i> Scholarships
+                            </a></li>
+                            <li><a class="dropdown-item" href="downloads.html">
+                                <i class="fas fa-download me-2"></i> Downloads
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">
+                            <i class="fas fa-images me-1"></i> Gallery
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-1"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Right Side Items -->
+                <div class="d-flex align-items-center">
+                    <!-- Search Form -->
+                    <form class="search-form me-3 d-none d-md-block">
+                        <div class="input-group">
+                            <input class="form-control form-control-sm" type="search" placeholder="Search...">
+                            <button class="btn btn-outline-light btn-sm" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Member Login -->
+                    <a href="portal.html" class="nav-link member-login-btn">
+                        <i class="fas fa-user me-1"></i> Member Login
+                    </a>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="btn btn-link nav-link ms-2" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Add padding to account for fixed navbar -->
+    <div class="pt-5 mt-5"></div>
+
+    <!-- Resources Header -->
+    <header class="bg-primary text-white py-5">
+        <div class="container">
+            <h1 class="display-4">Resources</h1>
+            <p class="lead">Access academic materials, scholarships, and career opportunities</p>
+        </div>
+    </header>
+
+    <!-- Resources page -->
+    <main class="pt-5 mt-5">
+        <section class="py-5">
+            <div class="container">
+                <h1 class="text-center mb-5">Resources</h1>
+                <!-- Add resources content -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Academic Resources -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Academic Materials</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h4">
+                                <i class="fas fa-book text-primary me-2"></i>
+                                Study Guides
+                            </h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-file-pdf me-2"></i>
+                                        Mathematics Study Guide
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-file-pdf me-2"></i>
+                                        Physics Notes
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-file-pdf me-2"></i>
+                                        Chemistry Lab Manual
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h4">
+                                <i class="fas fa-video text-primary me-2"></i>
+                                Video Tutorials
+                            </h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-play-circle me-2"></i>
+                                        Programming Basics
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-play-circle me-2"></i>
+                                        Engineering Concepts
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-play-circle me-2"></i>
+                                        Business Analytics
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h4">
+                                <i class="fas fa-tasks text-primary me-2"></i>
+                                Practice Tests
+                            </h3>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-file-alt me-2"></i>
+                                        Mock Exams
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-file-alt me-2"></i>
+                                        Quiz Bank
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-file-alt me-2"></i>
+                                        Past Papers
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholarships & Financial Aid -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Scholarships & Financial Aid</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h4">Available Scholarships</h3>
+                            <div class="scholarship-item border-bottom py-3">
+                                <h5>Merit Scholarship</h5>
+                                <p class="mb-2"><i class="fas fa-calendar me-2"></i>Deadline: April 30, 2024</p>
+                                <p class="mb-0">Full tuition coverage for outstanding academic achievement.</p>
+                                <a href="#" class="btn btn-outline-primary mt-2">Apply Now</a>
+                            </div>
+                            <div class="scholarship-item border-bottom py-3">
+                                <h5>Need-Based Grant</h5>
+                                <p class="mb-2"><i class="fas fa-calendar me-2"></i>Deadline: May 15, 2024</p>
+                                <p class="mb-0">Financial assistance based on demonstrated need.</p>
+                                <a href="#" class="btn btn-outline-primary mt-2">Apply Now</a>
+                            </div>
+                            <div class="scholarship-item py-3">
+                                <h5>Research Fellowship</h5>
+                                <p class="mb-2"><i class="fas fa-calendar me-2"></i>Deadline: June 1, 2024</p>
+                                <p class="mb-0">Funding for research projects and academic pursuits.</p>
+                                <a href="#" class="btn btn-outline-primary mt-2">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h4">Financial Resources</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-4">
+                                    <h5>Financial Planning Workshop</h5>
+                                    <p>Learn about budgeting and financial management for students.</p>
+                                    <a href="#" class="btn btn-outline-primary">Register</a>
+                                </li>
+                                <li class="mb-4">
+                                    <h5>Student Loan Information</h5>
+                                    <p>Guidance on educational loan options and repayment plans.</p>
+                                    <a href="#" class="btn btn-outline-primary">Learn More</a>
+                                </li>
+                                <li>
+                                    <h5>Work-Study Programs</h5>
+                                    <p>On-campus employment opportunities for students.</p>
+                                    <a href="#" class="btn btn-outline-primary">View Opportunities</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Opportunities -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Career Opportunities</h2>
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title h4 mb-4">Latest Job Postings</h3>
+                            <div class="job-listing border-bottom pb-3 mb-3">
+                                <h5>Software Developer Intern</h5>
+                                <p class="mb-2"><i class="fas fa-building me-2"></i>Tech Solutions Ltd</p>
+                                <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Kampala, Uganda</p>
+                                <a href="#" class="btn btn-outline-primary">Apply Now</a>
+                            </div>
+                            <div class="job-listing border-bottom pb-3 mb-3">
+                                <h5>Marketing Assistant</h5>
+                                <p class="mb-2"><i class="fas fa-building me-2"></i>Global Marketing Agency</p>
+                                <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Nairobi, Kenya</p>
+                                <a href="#" class="btn btn-outline-primary">Apply Now</a>
+                            </div>
+                            <div class="job-listing">
+                                <h5>Research Assistant</h5>
+                                <p class="mb-2"><i class="fas fa-building me-2"></i>University Research Center</p>
+                                <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>On Campus</p>
+                                <a href="#" class="btn btn-outline-primary">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title h4 mb-4">Career Development</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-file-alt me-2"></i>
+                                        Resume Writing Tips
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-user-tie me-2"></i>
+                                        Interview Preparation
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-handshake me-2"></i>
+                                        Networking Skills
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-briefcase me-2"></i>
+                                        Career Planning Guide
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Quick Links -->
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Academic Support</a></li>
+                    <li><a href="#">Student Guidelines</a></li>
+                    <li><a href="#">Cultural Programs</a></li>
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h4 class="footer-heading">Contact Info</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt me-2"></i> Buegema University Campus</li>
+                    <li><i class="fas fa-phone me-2"></i> +256 123 456 789</li>
+                    <li><i class="fas fa-envelope me-2"></i> info@busssa.org</li>
+                    <li><i class="fas fa-clock me-2"></i> Mon - Fri, 9:00 - 17:00</li>
+                </ul>
+            </div>
+
+            <!-- Newsletter & Social -->
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h4 class="footer-heading">Stay Connected</h4>
+                <p>Subscribe to our newsletter for updates</p>
+                <form class="mb-3">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </div>
+                </form>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Donation Section -->
+        <div class="donation-section text-center mt-4">
+            <h4 class="footer-heading">Support Our Mission</h4>
+            <p>Help us empower South Sudanese students through your generous donations</p>
+            <div class="donation-methods">
+                <a href="#" class="donation-method">
+                    <i class="fab fa-cc-visa"></i>
+                    <span>Credit Card</span>
+                </a>
+                <a href="#" class="donation-method">
+                    <i class="fab fa-paypal"></i>
+                    <span>PayPal</span>
+                </a>
+                <a href="#" class="donation-method">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Mobile Money</span>
+                </a>
+                <a href="#" class="donation-method">
+                    <i class="fas fa-university"></i>
+                    <span>Bank Transfer</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2024 BUSSSA. All rights reserved. | Designed by <a href="#" class="designer-credit">Sammiepro</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll Buttons -->
+<button id="scrollUp" class="scroll-btn" title="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+<button id="scrollDown" class="scroll-btn" title="Scroll to bottom">
+    <i class="fas fa-chevron-down"></i>
+</button>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JavaScript -->
+<script>
+    // Scroll buttons functionality
+    document.getElementById('scrollUp').addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    document.getElementById('scrollDown').addEventListener('click', function() {
+        window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+
+    // Show/hide scroll buttons based on scroll position
+    window.addEventListener('scroll', function() {
+        const scrollUp = document.getElementById('scrollUp');
+        const scrollDown = document.getElementById('scrollDown');
+        
+        if (window.scrollY > 300) {
+            scrollUp.style.display = 'flex';
+        } else {
+            scrollUp.style.display = 'none';
+        }
+
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
+            scrollDown.style.display = 'none';
+        } else {
+            scrollDown.style.display = 'flex';
+        }
+    });
+
+    // Initially hide scroll up button
+    document.getElementById('scrollUp').style.display = 'none';
+</script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
