@@ -27,6 +27,8 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    background: linear-gradient(rgba(13, 110, 253, 0.95), rgba(13, 110, 253, 0.95)),
+                url('img/A1.jpg') center/cover no-repeat;
 }
 
 .navbar-brand {
@@ -134,11 +136,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mobile Navigation */
 @media (max-width: 991.98px) {
+    .navbar {
+        background: linear-gradient(rgba(13, 110, 253, 0.98), rgba(13, 110, 253, 0.98)),
+                    url('img/A1.jpg') center/cover no-repeat;
+    }
+
     .navbar-collapse {
-        background-color: var(--bs-primary);
+        background-color: rgba(13, 110, 253, 0.95);
         padding: 1rem;
         border-radius: 0.5rem;
         margin-top: 0.5rem;
+        backdrop-filter: blur(5px);
     }
 
     .nav-link {
@@ -146,9 +154,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .dropdown-menu {
-        background-color: rgba(0,0,0,0.1);
+        background-color: rgba(13, 110, 253, 0.95);
         border: none;
         margin-left: 1rem;
+        backdrop-filter: blur(5px);
     }
 
     .search-form {
