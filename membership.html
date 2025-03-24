@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - BUSSSA</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/image.png" alt="BUSSSA Logo" height="40" class="me-2">
+                <span>BUSSSA</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-info-circle me-1"></i> About Us
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="about.html">
+                                <i class="fas fa-book-open me-2"></i> Our Story
+                            </a></li>
+                            <li><a class="dropdown-item" href="team.html">
+                                <i class="fas fa-users me-2"></i> Our Team
+                            </a></li>
+                            <li><a class="dropdown-item" href="constitution.html">
+                                <i class="fas fa-file-alt me-2"></i> Constitution
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-friends me-1"></i> Membership
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item active" href="membership.html">
+                                <i class="fas fa-user-plus me-2"></i> Join Us
+                            </a></li>
+                            <li><a class="dropdown-item" href="benefits.html">
+                                <i class="fas fa-gift me-2"></i> Benefits
+                            </a></li>
+                            <li><a class="dropdown-item" href="alumni.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Alumni
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">
+                            <i class="fas fa-calendar-alt me-1"></i> Events
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-book-reader me-1"></i> Resources
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="academic.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Academic Support
+                            </a></li>
+                            <li><a class="dropdown-item" href="scholarships.html">
+                                <i class="fas fa-award me-2"></i> Scholarships
+                            </a></li>
+                            <li><a class="dropdown-item" href="downloads.html">
+                                <i class="fas fa-download me-2"></i> Downloads
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">
+                            <i class="fas fa-images me-1"></i> Gallery
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-1"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Right Side Items -->
+                <div class="d-flex align-items-center">
+                    <!-- Search Form -->
+                    <form class="search-form me-3 d-none d-md-block">
+                        <div class="input-group">
+                            <input class="form-control form-control-sm" type="search" placeholder="Search...">
+                            <button class="btn btn-outline-light btn-sm" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Member Login -->
+                    <a href="portal.html" class="nav-link member-login-btn">
+                        <i class="fas fa-user me-1"></i> Member Login
+                    </a>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="btn btn-link nav-link ms-2" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Add padding to account for fixed navbar -->
+    <div class="pt-5 mt-5"></div>
+
+    <!-- Membership Header -->
+    <header class="bg-primary text-white py-5">
+        <div class="container">
+            <h1 class="display-4">Join BUSSSA</h1>
+            <p class="lead">Become part of our vibrant community of South Sudanese students</p>
+        </div>
+    </header>
+
+    <!-- Membership Benefits -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Membership Benefits</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-graduation-cap fa-3x text-primary mb-3"></i>
+                            <h3 class="card-title h4">Academic Support</h3>
+                            <p class="card-text">Access study groups, tutoring services, and academic resources.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                            <h3 class="card-title h4">Networking</h3>
+                            <p class="card-text">Connect with fellow students and alumni for career opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-calendar-alt fa-3x text-primary mb-3"></i>
+                            <h3 class="card-title h4">Events Access</h3>
+                            <p class="card-text">Participate in cultural events, workshops, and social gatherings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Registration Form -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h2 class="text-center mb-4">Membership Registration</h2>
+                            <form id="membershipForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="studentId" class="form-label">Student ID</label>
+                                        <input type="text" class="form-control" id="studentId" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="course" class="form-label">Course of Study</label>
+                                        <input type="text" class="form-control" id="course" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="yearOfStudy" class="form-label">Year of Study</label>
+                                        <select class="form-select" id="yearOfStudy" required>
+                                            <option value="">Select Year</option>
+                                            <option value="1">First Year</option>
+                                            <option value="2">Second Year</option>
+                                            <option value="3">Third Year</option>
+                                            <option value="4">Fourth Year</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="terms" required>
+                                            <label class="form-check-label" for="terms">
+                                                I agree to the terms and conditions
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg">Submit Application</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Member Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">What Our Members Say</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-quote-left text-primary fa-2x"></i>
+                            </div>
+                            <p class="card-text">"BUSSSA has been instrumental in my academic journey. The support system is amazing!"</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="assets/member1.jpg" alt="Member" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h5 class="mb-0">John Doe</h5>
+                                    <small class="text-muted">Third Year Student</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-quote-left text-primary fa-2x"></i>
+                            </div>
+                            <p class="card-text">"The networking opportunities and cultural events have made my university experience unforgettable."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="assets/member2.jpg" alt="Member" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h5 class="mb-0">Jane Smith</h5>
+                                    <small class="text-muted">Second Year Student</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-quote-left text-primary fa-2x"></i>
+                            </div>
+                            <p class="card-text">"Being part of BUSSSA has helped me stay connected to my culture while pursuing my education."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="assets/member3.jpg" alt="Member" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h5 class="mb-0">David Wilson</h5>
+                                    <small class="text-muted">Fourth Year Student</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Quick Links -->
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Academic Support</a></li>
+                    <li><a href="#">Student Guidelines</a></li>
+                    <li><a href="#">Cultural Programs</a></li>
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h4 class="footer-heading">Contact Info</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt me-2"></i> Buegema University Campus</li>
+                    <li><i class="fas fa-phone me-2"></i> +256 123 456 789</li>
+                    <li><i class="fas fa-envelope me-2"></i> info@busssa.org</li>
+                    <li><i class="fas fa-clock me-2"></i> Mon - Fri, 9:00 - 17:00</li>
+                </ul>
+            </div>
+
+            <!-- Newsletter & Social -->
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h4 class="footer-heading">Stay Connected</h4>
+                <p>Subscribe to our newsletter for updates</p>
+                <form class="mb-3">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </div>
+                </form>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Donation Section -->
+        <div class="donation-section text-center mt-4">
+            <h4 class="footer-heading">Support Our Mission</h4>
+            <p>Help us empower South Sudanese students through your generous donations</p>
+            <div class="donation-methods">
+                <a href="#" class="donation-method">
+                    <i class="fab fa-cc-visa"></i>
+                    <span>Credit Card</span>
+                </a>
+                <a href="#" class="donation-method">
+                    <i class="fab fa-paypal"></i>
+                    <span>PayPal</span>
+                </a>
+                <a href="#" class="donation-method">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Mobile Money</span>
+                </a>
+                <a href="#" class="donation-method">
+                    <i class="fas fa-university"></i>
+                    <span>Bank Transfer</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2024 BUSSSA. All rights reserved. | Designed by <a href="#" class="designer-credit">Sammiepro</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll Buttons -->
+<button id="scrollUp" class="scroll-btn" title="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+<button id="scrollDown" class="scroll-btn" title="Scroll to bottom">
+    <i class="fas fa-chevron-down"></i>
+</button>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JavaScript -->
+<script>
+    // Scroll buttons functionality
+    document.getElementById('scrollUp').addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    document.getElementById('scrollDown').addEventListener('click', function() {
+        window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+
+    // Show/hide scroll buttons based on scroll position
+    window.addEventListener('scroll', function() {
+        const scrollUp = document.getElementById('scrollUp');
+        const scrollDown = document.getElementById('scrollDown');
+        
+        if (window.scrollY > 300) {
+            scrollUp.style.display = 'flex';
+        } else {
+            scrollUp.style.display = 'none';
+        }
+
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
+            scrollDown.style.display = 'none';
+        } else {
+            scrollDown.style.display = 'flex';
+        }
+    });
+
+    // Initially hide scroll up button
+    document.getElementById('scrollUp').style.display = 'none';
+</script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
