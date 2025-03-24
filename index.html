@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUSSSA - Buegema University South Sudanese Students Association</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <link href="styles-enhanced.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ 
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/image.png" alt="BUSSSA Logo" height="40" class="me-2">
+                <span>BUSSSA</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-info-circle me-1"></i> About Us
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="about.html">
+                                <i class="fas fa-book-open me-2"></i> Our Story
+                            </a></li>
+                            <li><a class="dropdown-item" href="team.html">
+                                <i class="fas fa-users me-2"></i> Our Team
+                            </a></li>
+                            <li><a class="dropdown-item" href="constitution.html">
+                                <i class="fas fa-file-alt me-2"></i> Constitution
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-friends me-1"></i> Membership
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="membership.html">
+                                <i class="fas fa-user-plus me-2"></i> Join Us
+                            </a></li>
+                            <li><a class="dropdown-item" href="benefits.html">
+                                <i class="fas fa-gift me-2"></i> Benefits
+                            </a></li>
+                            <li><a class="dropdown-item" href="alumni.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Alumni
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">
+                            <i class="fas fa-calendar-alt me-1"></i> Events
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-book-reader me-1"></i> Resources
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="academic.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Academic Support
+                            </a></li>
+                            <li><a class="dropdown-item" href="scholarships.html">
+                                <i class="fas fa-award me-2"></i> Scholarships
+                            </a></li>
+                            <li><a class="dropdown-item" href="downloads.html">
+                                <i class="fas fa-download me-2"></i> Downloads
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">
+                            <i class="fas fa-images me-1"></i> Gallery
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-1"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Right Side Items -->
+                <div class="d-flex align-items-center">
+                    <!-- Search Form -->
+                    <form class="search-form me-3 d-none d-md-block">
+                        <div class="input-group">
+                            <input class="form-control form-control-sm" type="search" placeholder="Search...">
+                            <button class="btn btn-outline-light btn-sm" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Member Login -->
+                    <a href="portal.html" class="nav-link member-login-btn">
+                        <i class="fas fa-user me-1"></i> Member Login
+                    </a>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="btn btn-link nav-link ms-2" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Add padding to account for fixed navbar -->
+    <div class="pt-5 mt-5"></div>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-4">Welcome to BUSSSA</h1>
+                        <p class="lead mb-4">Uniting South Sudanese Students at Buegema University</p>
+                        <div class="mt-4">
+                            <a href="membership.html" class="btn btn-light btn-lg me-2" data-aos="fade-up" data-aos-delay="200">Join Us</a>
+                            <a href="about.html" class="btn btn-outline-light btn-lg" data-aos="fade-up" data-aos-delay="300">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Preview -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2>About BUSSSA</h2>
+                <div class="section-preview">
+                    <div class="row g-4 mt-3">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-bullseye fa-3x text-primary mb-3"></i>
+                                    <h3 class="h4">Our Mission</h3>
+                                    <p>To work together as a team to ensure that the needs of South Sudanese students
+                                         are met through equitable access to appropriate learning and life skills programs 
+                                         to improve various aspects of quality education, social, management and excellence of all, in order to be recognized as measurable learning University students</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-eye fa-3x text-primary mb-3"></i>
+                                    <h3 class="h4">Our Vision</h3>
+                                    <p>To be a leading student organization that empowers South Sudanese & Sudanese students to excel academically and culturally.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="about.html" class="btn btn-primary mt-4">Learn More About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Preview -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2>Membership Benefits</h2>
+                <div class="section-preview">
+                    <div class="row g-4 mt-3">
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-users fa-2x text-primary mb-3"></i>
+                                    <h3 class="h5">Community</h3>
+                                    <p>Join a supportive network of fellow South Sudanese students.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-graduation-cap fa-2x text-primary mb-3"></i>
+                                    <h3 class="h5">Academic Support</h3>
+                                    <p>Access study groups and academic resources.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-calendar fa-2x text-primary mb-3"></i>
+                                    <h3 class="h5">Events</h3>
+                                    <p>Participate in cultural and social events.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="membership.html" class="btn btn-primary mt-4">Become a Member</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Preview -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2>Upcoming Events</h2>
+                <div class="section-preview">
+                    <div class="row g-4 mt-3">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <img src="https://media.gettyimages.com/id/1203460083/photo/south-sudanese-dancers-perform-during-the-opening-ceremony.jpg" 
+                                     class="card-img-top" 
+                                     alt="South Sudan Cultural Dance Performance" 
+                                     style="height: 200px; object-fit: cover;"
+                                     loading="lazy">
+                                <div class="card-body">
+                                    <span class="badge bg-primary mb-2">Cultural</span>
+                                    <h3 class="h5">Cultural Festival 2024</h3>
+                                    <p class="text-muted">
+                                        <i class="far fa-calendar-alt me-2"></i>March 15, 2024
+                                        <br>
+                                        <i class="far fa-clock me-2"></i>2:00 PM - 6:00 PM
+                                    </p>
+                                    <p class="small">Experience traditional South Sudanese dances, music, and cultural exhibitions.</p>
+                                    <a href="events.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <img src="https://media.gettyimages.com/id/1370869394/photo/students-attend-class-at-juba-one-girls-primary-school-in-juba-south-sudan-on-may-3-2022-the.jpg" 
+                                     class="card-img-top" 
+                                     alt="South Sudanese Students in Academic Session"
+                                     style="height: 200px; object-fit: cover;"
+                                     loading="lazy">
+                                <div class="card-body">
+                                    <span class="badge bg-info mb-2">Academic</span>
+                                    <h3 class="h5">Academic Excellence Workshop</h3>
+                                    <p class="text-muted">
+                                        <i class="far fa-calendar-alt me-2"></i>March 20, 2024
+                                        <br>
+                                        <i class="far fa-clock me-2"></i>10:00 AM - 12:00 PM
+                                    </p>
+                                    <p class="small">Join our workshop focused on academic success and career development.</p>
+                                    <a href="events.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <img src="https://media.gettyimages.com/id/1203460265/photo/south-sudan-players-celebrate-scoring.jpg" 
+                                     class="card-img-top" 
+                                     alt="South Sudan Sports Celebration"
+                                     style="height: 200px; object-fit: cover;"
+                                     loading="lazy">
+                                <div class="card-body">
+                                    <span class="badge bg-success mb-2">Sports</span>
+                                    <h3 class="h5">BUSSSA Sports Day</h3>
+                                    <p class="text-muted">
+                                        <i class="far fa-calendar-alt me-2"></i>March 25, 2024
+                                        <br>
+                                        <i class="far fa-clock me-2"></i>9:00 AM - 5:00 PM
+                                    </p>
+                                    <p class="small">Compete in football, basketball, and traditional South Sudanese sports.</p>
+                                    <a href="events.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="events.html" class="btn btn-primary mt-4">View All Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Preview -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2>Latest News</h2>
+                <div class="section-preview">
+                    <div class="row g-4 mt-3">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <span class="badge bg-primary mb-2">Featured</span>
+                                    <h3 class="h5">Annual Cultural Festival 2024</h3>
+                                    <p>Join us for our biggest cultural celebration of the year!</p>
+                                    <a href="blog.html" class="btn btn-link p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <span class="badge bg-info mb-2">News</span>
+                                    <h3 class="h5">New Mentorship Program Launch</h3>
+                                    <p>BUSSSA launches new mentorship program for freshmen.</p>
+                                    <a href="blog.html" class="btn btn-link p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="blog.html" class="btn btn-primary mt-4">Read More News</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Preview -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2>Get in Touch</h2>
+                <div class="section-preview">
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                                    <h3 class="h4">Contact Us</h3>
+                                    <p>Have questions? We're here to help!</p>
+                                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Academic Support</a></li>
+                        <li><a href="#">Student Guidelines</a></li>
+                        <li><a href="#">Cultural Programs</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Buegema University Campus</li>
+                        <li><i class="fas fa-phone me-2"></i> +256 123 456 789</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@busssa.org</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon - Fri, 9:00 - 17:00</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter & Social -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Stay Connected</h4>
+                    <p>Subscribe to our newsletter for updates</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donation Section -->
+            <div class="donation-section text-center mt-4">
+                <h4 class="footer-heading">Support Our Mission</h4>
+                <p>Help us empower South Sudanese students through your generous donations</p>
+                <div class="donation-methods">
+                    <a href="#" class="donation-method">
+                        <i class="fab fa-cc-visa"></i>
+                        <span>Credit Card</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fab fa-paypal"></i>
+                        <span>PayPal</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile Money</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fas fa-university"></i>
+                        <span>Bank Transfer</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2025 BUSSSA. All rights reserved. | Designed by <a href="#" class="designer-credit">Sammiepro</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Buttons -->
+    <button id="scrollUp" class="scroll-btn" title="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <button id="scrollDown" class="scroll-btn" title="Scroll to bottom">
+        <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Scroll buttons functionality
+        document.getElementById('scrollUp').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        document.getElementById('scrollDown').addEventListener('click', function() {
+            window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'smooth'
+            });
+        });
+
+        // Show/hide scroll buttons based on scroll position
+        window.addEventListener('scroll', function() {
+            const scrollUp = document.getElementById('scrollUp');
+            const scrollDown = document.getElementById('scrollDown');
+            
+            if (window.scrollY > 300) {
+                scrollUp.style.display = 'flex';
+            } else {
+                scrollUp.style.display = 'none';
+            }
+
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
+                scrollDown.style.display = 'none';
+            } else {
+                scrollDown.style.display = 'flex';
+            }
+        });
+
+        // Initially hide scroll up button
+        document.getElementById('scrollUp').style.display = 'none';
+
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-up animation to elements when they become visible
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(element => {
+            observer.observe(element);
+        });
+
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const icon = darkModeToggle.querySelector('i');
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        setTheme(savedTheme);
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+
+        // Navbar Shrink on Scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-shrink');
+            } else {
+                navbar.classList.remove('navbar-shrink');
+            }
+        });
+
+        // Active Link Highlighting
+        const currentLocation = location.href;
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        navLinks.forEach(link => {
+            if (link.href === currentLocation) {
+                link.classList.add('active');
+            }
+        });
+
+        // Dropdown Hover Effect (for desktop)
+        if (window.innerWidth > 992) {
+            document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+                dropdown.addEventListener('mouseenter', function() {
+                    this.querySelector('.dropdown-menu').classList.add('show');
+                });
+                dropdown.addEventListener('mouseleave', function() {
+                    this.querySelector('.dropdown-menu').classList.remove('show');
+                });
+            });
+        }
+
+        document.querySelectorAll('.card-img-top').forEach(img => {
+            img.classList.add('loading');
+            img.onload = function() {
+                this.classList.remove('loading');
+            }
+        });
+    </script>
+
+    <!-- Add this CSS for better image handling -->
+   
+</body>
+</html>
