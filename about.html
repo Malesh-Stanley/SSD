@@ -13,68 +13,99 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/logo.png" alt="BUSSSA Logo" height="40" class="me-2">
-                BUSSSA
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/image.png" alt="BUSSSA Logo" height="40" class="me-2">
+                <span>BUSSSA</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navigation Items -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            About Us
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-info-circle me-1"></i> About Us
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="about.html">Our Story</a></li>
-                            <li><a class="dropdown-item" href="team.html">Our Team</a></li>
-                            <li><a class="dropdown-item" href="constitution.html">Constitution</a></li>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item active" href="about.html">
+                                <i class="fas fa-book-open me-2"></i> Our Story
+                            </a></li>
+                            <li><a class="dropdown-item" href="team.html">
+                                <i class="fas fa-users me-2"></i> Our Team
+                            </a></li>
+                            <li><a class="dropdown-item" href="constitution.html">
+                                <i class="fas fa-file-alt me-2"></i> Constitution
+                            </a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Membership
+                            <i class="fas fa-user-friends me-1"></i> Membership
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="membership.html">Join Us</a></li>
-                            <li><a class="dropdown-item" href="benefits.html">Benefits</a></li>
-                            <li><a class="dropdown-item" href="alumni.html">Alumni</a></li>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="membership.html">
+                                <i class="fas fa-user-plus me-2"></i> Join Us
+                            </a></li>
+                            <li><a class="dropdown-item" href="benefits.html">
+                                <i class="fas fa-gift me-2"></i> Benefits
+                            </a></li>
+                            <li><a class="dropdown-item" href="alumni.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Alumni
+                            </a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="events.html">Events</a>
+                        <a class="nav-link" href="events.html">
+                            <i class="fas fa-calendar-alt me-1"></i> Events
+                        </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Resources
+                            <i class="fas fa-book-reader me-1"></i> Resources
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="academic.html">Academic Support</a></li>
-                            <li><a class="dropdown-item" href="scholarships.html">Scholarships</a></li>
-                            <li><a class="dropdown-item" href="downloads.html">Downloads</a></li>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="academic.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Academic Support
+                            </a></li>
+                            <li><a class="dropdown-item" href="scholarships.html">
+                                <i class="fas fa-award me-2"></i> Scholarships
+                            </a></li>
+                            <li><a class="dropdown-item" href="downloads.html">
+                                <i class="fas fa-download me-2"></i> Downloads
+                            </a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
+                        <a class="nav-link" href="gallery.html">
+                            <i class="fas fa-images me-1"></i> Gallery
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-1"></i> Contact
+                        </a>
                     </li>
                 </ul>
 
                 <!-- Right Side Items -->
                 <div class="d-flex align-items-center">
                     <!-- Search Form -->
-                    <form class="search-form me-3">
+                    <form class="search-form me-3 d-none d-md-block">
                         <div class="input-group">
-                            <input class="form-control" type="search" placeholder="Search...">
-                            <button class="btn btn-outline-light" type="submit">
+                            <input class="form-control form-control-sm" type="search" placeholder="Search...">
+                            <button class="btn btn-outline-light btn-sm" type="submit">
                                 <i class="fas fa-search"></i>
                             </button>
                         </div>
@@ -94,6 +125,9 @@
         </div>
     </nav>
 
+    <!-- Add padding to account for fixed navbar -->
+    <div class="pt-5 mt-5"></div>
+
     <!-- About Us page -->
     <main class="pt-5 mt-5">
         <section class="py-5">
@@ -104,7 +138,38 @@
                         <div class="card shadow-sm">
                             <div class="card-body">
                                 <h2>Our Story</h2>
-                                <!-- Add content -->
+                                <p class="lead mb-4">BUSSSA was born from a vision to unite and empower South Sudanese students at Buegema University, creating a home away from home while pursuing academic excellence.</p>
+                                
+                                <p>Established in 2020, the Buegema University South Sudanese Students Association (BUSSSA) emerged from the collective desire of South Sudanese students to create a supportive community that would help them navigate their academic journey while maintaining strong connections to their cultural heritage.</p>
+                                
+                                <p>What started as informal gatherings of a few students has grown into a vibrant organization that serves as a bridge between South Sudanese students and the broader university community. Our association provides academic support, cultural celebration opportunities, and a strong support network that helps students thrive in their educational pursuits.</p>
+                                
+                                <p>Today, BUSSSA stands as a testament to the power of unity and shared purpose. We've successfully implemented various programs including:</p>
+                                
+                                <ul class="list-unstyled mt-4">
+                                    <li class="mb-3">
+                                        <i class="fas fa-check-circle text-primary me-2"></i>
+                                        Peer mentorship programs connecting senior students with freshmen
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-check-circle text-primary me-2"></i>
+                                        Regular academic support sessions and study groups
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-check-circle text-primary me-2"></i>
+                                        Cultural festivals celebrating South Sudanese heritage
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-check-circle text-primary me-2"></i>
+                                        Career development workshops and networking events
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-check-circle text-primary me-2"></i>
+                                        Community outreach and service initiatives
+                                    </li>
+                                </ul>
+
+                                <p class="mt-4">As we continue to grow, our commitment remains steadfast: to support every South Sudanese student at Buegema University in achieving their academic goals while fostering a strong sense of community and cultural identity. We invite you to be part of our story as we work together to build a brighter future for our members and our nation.</p>
                             </div>
                         </div>
                     </div>
