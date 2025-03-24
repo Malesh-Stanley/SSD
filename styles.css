@@ -38,6 +38,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-brand img {
     transition: transform 0.3s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
 }
 
 .navbar-brand:hover img {
