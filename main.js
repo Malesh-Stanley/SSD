@@ -67,4 +67,72 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 document.querySelectorAll('.card, .quick-link-item').forEach(element => {
     observer.observe(element);
-}); 
+});
+
+// Cookie Consent
+function showCookieConsent() {
+    if (!localStorage.getItem('cookieConsent')) {
+        const cookieBanner = document.createElement('div');
+        cookieBanner.className = 'cookie-banner';
+        cookieBanner.innerHTML = `
+            <div class="cookie-content">
+                <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+                <div class="cookie-buttons">
+                    <button class="btn btn-primary btn-sm" onclick="acceptCookies()">Accept</button>
+                    <button class="btn btn-outline-primary btn-sm" onclick="declineCookies()">Decline</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(cookieBanner);
+    }
+}
+
+function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.querySelector('.cookie-banner').remove();
+}
+
+function declineCookies() {
+    localStorage.setItem('cookieConsent', 'declined');
+    document.querySelector('.cookie-banner').remove();
+}
+
+// Initialize cookie consent on page load
+document.addEventListener('DOMContentLoaded', showCookieConsent);
+
+// Add cookie banner styles
+const style = document.createElement('style');
+style.textContent = `
+    .cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
+        padding: 1rem;
+        z-index: 1000;
+    }
+    .cookie-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+    .cookie-buttons {
+        display: flex;
+        gap: 0.5rem;
+    }
+    @media (max-width: 768px) {
+        .cookie-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        .cookie-buttons {
+            margin-top: 1rem;
+        }
+    }
+`;
+document.head.appendChild(style); 
