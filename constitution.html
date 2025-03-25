@@ -1,9 +1,483 @@
-<!-- Constitution page -->
-<main class="pt-5 mt-5">
-    <section class="py-5">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitution - BUSSSA</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <link href="styles-enhanced.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
-            <h1 class="text-center mb-5">BUSSSA Constitution</h1>
-            <!-- Add constitution content -->
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/image.png" alt="BUSSSA Logo" height="40" class="me-2">
+                <span>BUSSSA</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-info-circle me-1"></i> About Us
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="about.html">
+                                <i class="fas fa-book-open me-2"></i> Our Story
+                            </a></li>
+                            <li><a class="dropdown-item" href="team.html">
+                                <i class="fas fa-users me-2"></i> Our Team
+                            </a></li>
+                            <li><a class="dropdown-item active" href="constitution.html">
+                                <i class="fas fa-file-alt me-2"></i> Constitution
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-friends me-1"></i> Membership
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="membership.html">
+                                <i class="fas fa-user-plus me-2"></i> Join Us
+                            </a></li>
+                            <li><a class="dropdown-item" href="benefits.html">
+                                <i class="fas fa-gift me-2"></i> Benefits
+                            </a></li>
+                            <li><a class="dropdown-item" href="alumni.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Alumni
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">
+                            <i class="fas fa-calendar-alt me-1"></i> Events
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-book-reader me-1"></i> Resources
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="academic.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Academic Support
+                            </a></li>
+                            <li><a class="dropdown-item" href="scholarships.html">
+                                <i class="fas fa-award me-2"></i> Scholarships
+                            </a></li>
+                            <li><a class="dropdown-item" href="downloads.html">
+                                <i class="fas fa-download me-2"></i> Downloads
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">
+                            <i class="fas fa-images me-1"></i> Gallery
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-1"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Right Side Items -->
+                <div class="d-flex align-items-center">
+                    <!-- Search Form -->
+                    <form class="search-form me-3 d-none d-md-block">
+                        <div class="input-group">
+                            <input class="form-control form-control-sm" type="search" placeholder="Search...">
+                            <button class="btn btn-outline-light btn-sm" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Member Login -->
+                    <a href="portal.html" class="nav-link member-login-btn">
+                        <i class="fas fa-user me-1"></i> Member Login
+                    </a>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="btn btn-link nav-link ms-2" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-    </section>
-</main> 
+    </nav>
+
+    <!-- Add padding to account for fixed navbar -->
+    <div class="pt-5 mt-5"></div>
+
+    <!-- Main Content -->
+    <main class="pt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar Navigation -->
+                <div class="col-lg-3 d-none d-lg-block">
+                    <nav class="constitution-nav" id="constitution-nav">
+                        <h5 class="mb-3">Table of Contents</h5>
+                        <nav class="nav flex-column">
+                            <a class="nav-link" href="#preamble">Preamble</a>
+                            <a class="nav-link" href="#article1">Article I: Name and Purpose</a>
+                            <a class="nav-link" href="#article2">Article II: Membership</a>
+                            <a class="nav-link" href="#article3">Article III: Executive Committee</a>
+                            <a class="nav-link" href="#article4">Article IV: Elections</a>
+                            <a class="nav-link" href="#article5">Article V: Meetings</a>
+                            <a class="nav-link" href="#article6">Article VI: Finances</a>
+                            <a class="nav-link" href="#article7">Article VII: Amendments</a>
+                            <a class="nav-link" href="#article8">Article VIII: Dissolution</a>
+                        </nav>
+                    </nav>
+                </div>
+
+                <!-- Constitution Content -->
+                <div class="col-lg-9">
+                    <h1 class="text-center mb-5" data-aos="fade-up">BUSSSA Constitution</h1>
+                    
+                    <!-- Preamble -->
+                    <section id="preamble" class="constitution-section" data-aos="fade-up">
+                        <h2 class="article-title">Preamble</h2>
+                        <div class="section-content">
+                            <p>We, the South Sudanese & Sudanese students of Buegema University, in order to form a more perfect union, establish justice, promote academic excellence, and secure the blessings of education for ourselves and our posterity, do ordain and establish this Constitution for the Buegema University South Sudanese Students Association (BUSSSA).</p>
+                        </div>
+                    </section>
+
+                    <!-- Article I -->
+                    <section id="article1" class="constitution-section" data-aos="fade-up">
+                        <h2 class="article-title">Article I: Name and Purpose</h2>
+                        <div class="section-content">
+                            <h3>Section 1: Name</h3>
+                            <p>The name of this organization shall be the Buegema University South Sudanese Students Association, hereafter referred to as BUSSSA.</p>
+
+                            <h3>Section 2: Purpose</h3>
+                            <p>The purpose of BUSSSA shall be to:</p>
+                            <ol type="a">
+                                <li>Promote unity and cooperation among South Sudanese & Sudanese students</li>
+                                <li>Provide academic and social support to members</li>
+                                <li>Preserve and promote South Sudanese & Sudanese culture</li>
+                                <li>Represent the interests of South Sudanese & Sudanese students</li>
+                                <li>Foster leadership development among members</li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <!-- Article II -->
+                    <section id="article2" class="constitution-section" data-aos="fade-up">
+                        <h2 class="article-title">Article II: Membership</h2>
+                        <div class="section-content">
+                            <h3>Section 1: Eligibility</h3>
+                            <p>Membership shall be open to:</p>
+                            <ol type="a">
+                                <li>All South Sudanese & Sudanese students enrolled at Buegema University</li>
+                                <li>Alumni of Buegema University who were members during their study period</li>
+                                <li>Honorary members as approved by the Executive Committee</li>
+                            </ol>
+
+                            <h3>Section 2: Rights and Responsibilities</h3>
+                            <p>Members shall have the right to:</p>
+                            <ol type="a">
+                                <li>Vote in all BUSSSA elections</li>
+                                <li>Hold office if qualified</li>
+                                <li>Participate in all BUSSSA activities</li>
+                                <li>Access all BUSSSA resources and services</li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <!-- Article III -->
+                    <section id="article3" class="constitution-section" data-aos="fade-up">
+                        <h2 class="article-title">Article III: Executive Committee</h2>
+                        <div class="section-content">
+                            <h3>Section 1: Composition</h3>
+                            <p>The Executive Committee shall consist of:</p>
+                            <ol type="a">
+                                <li>President</li>
+                                <li>Vice President</li>
+                                <li>Secretary General</li>
+                                <li>Treasurer</li>
+                                <li>Academic Affairs Coordinator</li>
+                                <li>Cultural Affairs Coordinator</li>
+                                <li>Public Relations Officer</li>
+                            </ol>
+
+                            <h3>Section 2: Duties</h3>
+                            <p>Each officer shall perform the duties prescribed by this constitution and parliamentary authority.</p>
+                        </div>
+                    </section>
+
+                    <!-- Article IV -->
+                    <section id="article4" class="constitution-section" data-aos="fade-up">
+                        <h2 class="article-title">Article IV: Elections</h2>
+                        <div class="section-content">
+                            <h3>Section 1: Election Process</h3>
+                            <p>Elections shall be held annually through a democratic process.</p>
+
+                            <h3>Section 2: Eligibility</h3>
+                            <p>Candidates must:</p>
+                            <ol type="a">
+                                <li>Be full-time students</li>
+                                <li>Maintain good academic standing</li>
+                                <li>Have been active members for at least one semester</li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <!-- Article V -->
+                    <section id="article5" class="constitution-section" data-aos="fade-up">
+                        <h2 class="article-title">Article V: Meetings</h2>
+                        <div class="section-content">
+                            <h3>Section 1: Regular Meetings</h3>
+                            <p>Regular meetings shall be held monthly during the academic year.</p>
+
+                            <h3>Section 2: Special Meetings</h3>
+                            <p>Special meetings may be called by the President or by petition of one-third of the members.</p>
+                        </div>
+                    </section>
+
+                    <!-- Article VI -->
+                    <section id="article6" class="constitution-section" data-aos="fade-up">
+                        <h2 class="article-title">Article VI: Finances</h2>
+                        <div class="section-content">
+                            <h3>Section 1: Funding Sources</h3>
+                            <p>BUSSSA shall be funded through:</p>
+                            <ol type="a">
+                                <li>Membership dues</li>
+                                <li>Fundraising activities</li>
+                                <li>Donations and grants</li>
+                            </ol>
+
+                            <h3>Section 2: Financial Management</h3>
+                            <p>All financial transactions shall be transparent and documented.</p>
+                        </div>
+                    </section>
+
+                    <!-- Article VII -->
+                    <section id="article7" class="constitution-section" data-aos="fade-up">
+                        <h2 class="article-title">Article VII: Amendments</h2>
+                        <div class="section-content">
+                            <p>This constitution may be amended by a two-thirds vote of the members present at any regular meeting, provided that the amendment has been submitted in writing at the previous regular meeting.</p>
+                        </div>
+                    </section>
+
+                    <!-- Article VIII -->
+                    <section id="article8" class="constitution-section" data-aos="fade-up">
+                        <h2 class="article-title">Article VIII: Dissolution</h2>
+                        <div class="section-content">
+                            <p>In the event of dissolution, all assets shall be distributed to charitable organizations serving South Sudanese & Sudanese students.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="academic.html">Academic Support</a></li>
+                        <li><a href="scholarships.html">Scholarships</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="blog.html">Blog & News</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Buegema University Campus</li>
+                        <li><i class="fas fa-phone me-2"></i> +256 123 456 789</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@busssa.org</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon - Fri, 9:00 - 17:00</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter & Social -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Stay Connected</h4>
+                    <p>Subscribe to our newsletter for updates</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donation Section -->
+            <div class="donation-section text-center mt-4">
+                <h4 class="footer-heading">Support Our Mission</h4>
+                <p>Help us empower South Sudanese students through your generous donations</p>
+                <div class="donation-methods">
+                    <a href="#" class="donation-method">
+                        <i class="fab fa-cc-visa"></i>
+                        <span>Credit Card</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fab fa-paypal"></i>
+                        <span>PayPal</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile Money</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fas fa-university"></i>
+                        <span>Bank Transfer</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2024 BUSSSA. All rights reserved. | Designed by <a href="#" class="designer-credit">Sammiepro</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Buttons -->
+    <button id="scrollUp" class="scroll-btn" title="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <button id="scrollDown" class="scroll-btn" title="Scroll to bottom">
+        <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Navigation JS -->
+    <script src="navigation.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Scroll buttons functionality
+        document.getElementById('scrollUp').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        document.getElementById('scrollDown').addEventListener('click', function() {
+            window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'smooth'
+            });
+        });
+
+        // Show/hide scroll buttons based on scroll position
+        window.addEventListener('scroll', function() {
+            const scrollUp = document.getElementById('scrollUp');
+            const scrollDown = document.getElementById('scrollDown');
+            
+            if (window.scrollY > 300) {
+                scrollUp.style.display = 'flex';
+            } else {
+                scrollUp.style.display = 'none';
+            }
+
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
+                scrollDown.style.display = 'none';
+            } else {
+                scrollDown.style.display = 'flex';
+            }
+        });
+
+        // Initially hide scroll up button
+        document.getElementById('scrollUp').style.display = 'none';
+
+        // Highlight active section in sidebar based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.constitution-section');
+            const navLinks = document.querySelectorAll('.constitution-nav .nav-link');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll for sidebar navigation
+        document.querySelectorAll('.constitution-nav .nav-link').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
