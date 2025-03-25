@@ -1013,3 +1013,117 @@ header.bg-primary {
 .card:hover {
     transform: translateY(-5px);
 }
+
+/* Benefits Page Styles */
+.benefits-section {
+    position: relative;
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://media.gettyimages.com/id/1370869394/photo/students-attend-class-at-juba-one-girls-primary-school-in-juba-south-sudan-on-may-3-2022-the.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.benefits-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.benefits-content {
+    position: relative;
+    z-index: 2;
+}
+
+.benefits-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.benefits-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefits-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.benefits-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.benefits-description {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+/* Responsive Background Image */
+@media (max-width: 768px) {
+    .benefits-section {
+        background-attachment: scroll;
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    .benefits-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .benefits-icon {
+        font-size: 2.5rem;
+    }
+
+    .benefits-title {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .benefits-section {
+        padding: 40px 0;
+    }
+
+    .benefits-card {
+        padding: 15px;
+    }
+
+    .benefits-icon {
+        font-size: 2rem;
+    }
+
+    .benefits-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .benefits-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('https://media.gettyimages.com/id/1370869394/photo/students-attend-class-at-juba-one-girls-primary-school-in-juba-south-sudan-on-may-3-2022-the.jpg');
+}
+
+[data-theme="dark"] .benefits-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+}
