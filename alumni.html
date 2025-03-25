@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni - BUSSSA</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/image.png" alt="BUSSSA Logo" height="40" class="me-2">
+                <span>BUSSSA</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-info-circle me-1"></i> About Us
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="about.html">
+                                <i class="fas fa-book-open me-2"></i> Our Story
+                            </a></li>
+                            <li><a class="dropdown-item" href="team.html">
+                                <i class="fas fa-users me-2"></i> Our Team
+                            </a></li>
+                            <li><a class="dropdown-item" href="constitution.html">
+                                <i class="fas fa-file-alt me-2"></i> Constitution
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-friends me-1"></i> Membership
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="membership.html">
+                                <i class="fas fa-user-plus me-2"></i> Join Us
+                            </a></li>
+                            <li><a class="dropdown-item" href="benefits.html">
+                                <i class="fas fa-gift me-2"></i> Benefits
+                            </a></li>
+                            <li><a class="dropdown-item active" href="alumni.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Alumni
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">
+                            <i class="fas fa-calendar-alt me-1"></i> Events
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-book-reader me-1"></i> Resources
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="academic.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Academic Support
+                            </a></li>
+                            <li><a class="dropdown-item" href="scholarships.html">
+                                <i class="fas fa-award me-2"></i> Scholarships
+                            </a></li>
+                            <li><a class="dropdown-item" href="downloads.html">
+                                <i class="fas fa-download me-2"></i> Downloads
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">
+                            <i class="fas fa-images me-1"></i> Gallery
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-1"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Right Side Items -->
+                <div class="d-flex align-items-center">
+                    <!-- Search Form -->
+                    <form class="search-form me-3 d-none d-md-block">
+                        <div class="input-group">
+                            <input class="form-control form-control-sm" type="search" placeholder="Search...">
+                            <button class="btn btn-outline-light btn-sm" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Member Login -->
+                    <a href="portal.html" class="nav-link member-login-btn">
+                        <i class="fas fa-user me-1"></i> Member Login
+                    </a>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="btn btn-link nav-link ms-2" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Add padding to account for fixed navbar -->
+    <div class="pt-5 mt-5"></div>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4" data-aos="fade-up">BUSSSA Alumni</h1>
+                    <p class="lead mb-0" data-aos="fade-up" data-aos-delay="100">
+                        Stay connected with your fellow alumni and continue to be part of our growing community
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Alumni Section -->
+    <section class="content-section">
+        <div class="container">
+            <!-- Alumni Benefits -->
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h2 class="text-center mb-4">Alumni Benefits</h2>
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="text-center">
+                                        <i class="fas fa-network-wired fa-3x text-primary mb-3"></i>
+                                        <h3 class="h5">Networking</h3>
+                                        <p>Connect with fellow alumni and expand your professional network</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="text-center">
+                                        <i class="fas fa-briefcase fa-3x text-primary mb-3"></i>
+                                        <h3 class="h5">Career Support</h3>
+                                        <p>Access job opportunities and career development resources</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="text-center">
+                                        <i class="fas fa-graduation-cap fa-3x text-primary mb-3"></i>
+                                        <h3 class="h5">Continued Learning</h3>
+                                        <p>Access to workshops, seminars, and educational resources</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Success Stories -->
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-lg-12">
+                    <h2 class="text-center mb-4">Alumni Success Stories</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="https://media.gettyimages.com/id/1370869394/photo/students-attend-class-at-juba-one-girls-primary-school-in-juba-south-sudan-on-may-3-2022-the.jpg" 
+                                     class="card-img-top" 
+                                     alt="Alumni Success Story"
+                                     style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h3 class="h5">John Deng</h3>
+                                    <p class="text-muted">Class of 2020</p>
+                                    <p>Now working as a Software Engineer at Google, John credits BUSSSA for helping him develop leadership skills and professional connections.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="https://media.gettyimages.com/id/1203460083/photo/south-sudanese-dancers-perform-during-the-opening-ceremony.jpg" 
+                                     class="card-img-top" 
+                                     alt="Alumni Success Story"
+                                     style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h3 class="h5">Sarah Nyak</h3>
+                                    <p class="text-muted">Class of 2019</p>
+                                    <p>Founder of a successful tech startup, Sarah attributes her entrepreneurial spirit to the mentorship she received through BUSSSA.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="https://media.gettyimages.com/id/1203460265/photo/south-sudan-players-celebrate-scoring.jpg" 
+                                     class="card-img-top" 
+                                     alt="Alumni Success Story"
+                                     style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h3 class="h5">Michael Kuol</h3>
+                                    <p class="text-muted">Class of 2021</p>
+                                    <p>Currently pursuing a Ph.D. at Harvard University, Michael credits BUSSSA's academic support programs for his success.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Events -->
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-lg-12">
+                    <h2 class="text-center mb-4">Upcoming Alumni Events</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5">Annual Alumni Reunion</h3>
+                                    <p class="text-muted">
+                                        <i class="far fa-calendar-alt me-2"></i>June 15, 2024
+                                        <br>
+                                        <i class="far fa-clock me-2"></i>6:00 PM - 10:00 PM
+                                    </p>
+                                    <p>Join us for our annual alumni reunion featuring networking opportunities, keynote speakers, and cultural celebrations.</p>
+                                    <a href="#" class="btn btn-primary">Register Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5">Career Development Workshop</h3>
+                                    <p class="text-muted">
+                                        <i class="far fa-calendar-alt me-2"></i>July 5, 2024
+                                        <br>
+                                        <i class="far fa-clock me-2"></i>2:00 PM - 5:00 PM
+                                    </p>
+                                    <p>Professional development workshop focusing on career advancement strategies and networking skills.</p>
+                                    <a href="#" class="btn btn-primary">Register Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Directory -->
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h2 class="text-center mb-4">Alumni Directory</h2>
+                            <p class="text-center mb-4">Connect with fellow alumni through our exclusive directory</p>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <form class="mb-4">
+                                        <div class="input-group">
+                                            <input type="search" class="form-control" placeholder="Search alumni...">
+                                            <button class="btn btn-primary" type="submit">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div class="text-center">
+                                        <a href="#" class="btn btn-outline-primary">Access Directory</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Support -->
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h2 class="text-center mb-4">Support Current Students</h2>
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="text-center">
+                                        <i class="fas fa-hand-holding-usd fa-3x text-primary mb-3"></i>
+                                        <h3 class="h5">Mentorship</h3>
+                                        <p>Share your experience and guide current students in their academic and career journey</p>
+                                        <a href="#" class="btn btn-outline-primary">Become a Mentor</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="text-center">
+                                        <i class="fas fa-briefcase fa-3x text-primary mb-3"></i>
+                                        <h3 class="h5">Internships</h3>
+                                        <p>Offer internship opportunities to current BUSSSA members</p>
+                                        <a href="#" class="btn btn-outline-primary">Post an Internship</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="text-center">
+                                        <i class="fas fa-gift fa-3x text-primary mb-3"></i>
+                                        <h3 class="h5">Donations</h3>
+                                        <p>Support BUSSSA's programs and initiatives through your generous contributions</p>
+                                        <a href="#" class="btn btn-outline-primary">Donate Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stay Connected -->
+            <div class="text-center mt-5" data-aos="fade-up">
+                <h2 class="h3 mb-4">Stay Connected</h2>
+                <p class="lead mb-4">Join our alumni network and keep in touch with your fellow graduates</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <form class="mb-4">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <button class="btn btn-primary" type="submit">Subscribe to Newsletter</button>
+                            </div>
+                        </form>
+                        <div class="social-links">
+                            <a href="#" class="btn btn-outline-primary me-2" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i> LinkedIn Group
+                            </a>
+                            <a href="#" class="btn btn-outline-primary me-2" title="Facebook">
+                                <i class="fab fa-facebook-f"></i> Facebook Group
+                            </a>
+                            <a href="#" class="btn btn-outline-primary" title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i> WhatsApp Group
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="academic.html">Academic Support</a></li>
+                        <li><a href="scholarships.html">Scholarships</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="blog.html">Blog & News</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Buegema University Campus</li>
+                        <li><i class="fas fa-phone me-2"></i> +256 123 456 789</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@busssa.org</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon - Fri, 9:00 - 17:00</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter & Social -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Stay Connected</h4>
+                    <p>Subscribe to our newsletter for updates</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donation Section -->
+            <div class="donation-section text-center mt-4">
+                <h4 class="footer-heading">Support Our Mission</h4>
+                <p>Help us empower South Sudanese students through your generous donations</p>
+                <div class="donation-methods">
+                    <a href="#" class="donation-method">
+                        <i class="fab fa-cc-visa"></i>
+                        <span>Credit Card</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fab fa-paypal"></i>
+                        <span>PayPal</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile Money</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fas fa-university"></i>
+                        <span>Bank Transfer</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2024 BUSSSA. All rights reserved. | Designed by <a href="#" class="designer-credit">Sammiepro</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Buttons -->
+    <button id="scrollUp" class="scroll-btn" title="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <button id="scrollDown" class="scroll-btn" title="Scroll to bottom">
+        <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Navigation JS -->
+    <script src="navigation.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Scroll buttons functionality
+        document.getElementById('scrollUp').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        document.getElementById('scrollDown').addEventListener('click', function() {
+            window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'smooth'
+            });
+        });
+
+        // Show/hide scroll buttons based on scroll position
+        window.addEventListener('scroll', function() {
+            const scrollUp = document.getElementById('scrollUp');
+            const scrollDown = document.getElementById('scrollDown');
+            
+            if (window.scrollY > 300) {
+                scrollUp.style.display = 'flex';
+            } else {
+                scrollUp.style.display = 'none';
+            }
+
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
+                scrollDown.style.display = 'none';
+            } else {
+                scrollDown.style.display = 'flex';
+            }
+        });
+
+        // Initially hide scroll up button
+        document.getElementById('scrollUp').style.display = 'none';
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const icon = darkModeToggle.querySelector('i');
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        setTheme(savedTheme);
+    </script>
+</body>
+</html> 
