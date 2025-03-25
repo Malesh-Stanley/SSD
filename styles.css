@@ -1017,14 +1017,14 @@ header.bg-primary {
 /* Benefits Page Styles */
 .benefits-section {
     position: relative;
-    padding: 80px 0;
+    padding: 120px 0 80px;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                 url('https://media.gettyimages.com/id/1370869394/photo/students-attend-class-at-juba-one-girls-primary-school-in-juba-south-sudan-on-may-3-2022-the.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: #fff;
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
 }
@@ -1036,94 +1036,120 @@ header.bg-primary {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
     z-index: 1;
 }
 
 .benefits-content {
     position: relative;
     z-index: 2;
+    background: #fff;
+    padding: 80px 0;
 }
 
 .benefits-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #fff;
     border-radius: 15px;
-    padding: 30px;
+    padding: 40px 30px;
     margin-bottom: 30px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .benefits-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .benefits-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
     color: #fff;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.benefits-card:hover .benefits-icon {
+    transform: scale(1.1);
 }
 
 .benefits-title {
     font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #fff;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: 600;
 }
 
-.benefits-description {
-    color: rgba(255, 255, 255, 0.9);
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefits-list li {
+    color: #666;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
     line-height: 1.6;
 }
 
-/* Responsive Background Image */
-@media (max-width: 768px) {
-    .benefits-section {
-        background-attachment: scroll;
-        padding: 60px 0;
-        min-height: auto;
-    }
-
-    .benefits-card {
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-
-    .benefits-icon {
-        font-size: 2.5rem;
-    }
-
-    .benefits-title {
-        font-size: 1.25rem;
-    }
+.benefits-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-weight: bold;
 }
 
-@media (max-width: 576px) {
+/* Responsive Styles */
+@media (max-width: 768px) {
     .benefits-section {
-        padding: 40px 0;
+        padding: 100px 0 60px;
+        min-height: 50vh;
+    }
+
+    .benefits-content {
+        padding: 60px 0;
     }
 
     .benefits-card {
-        padding: 15px;
+        padding: 30px 20px;
     }
 
     .benefits-icon {
-        font-size: 2rem;
-    }
-
-    .benefits-title {
-        font-size: 1.1rem;
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
     }
 }
 
 /* Dark Mode Styles */
-[data-theme="dark"] .benefits-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-                url('https://media.gettyimages.com/id/1370869394/photo/students-attend-class-at-juba-one-girls-primary-school-in-juba-south-sudan-on-may-3-2022-the.jpg');
+[data-theme="dark"] .benefits-content {
+    background: #444242;
 }
 
 [data-theme="dark"] .benefits-card {
-    background: rgba(0, 0, 0, 0.3);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: #807e7e;
+    border-color: rgba(107, 101, 101, 0.1);
+}
+
+[data-theme="dark"] .benefits-title {
+    color: #fff;
+}
+
+[data-theme="dark"] .benefits-list li {
+    color: #ccc;
+}
+
+[data-theme="dark"] .benefits-list li::before {
+    color: #3498db;
 }
