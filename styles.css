@@ -741,3 +741,55 @@ header.bg-primary {
     transform: translateY(-3px);
     color: white;
 }
+
+/* Constitution Page Styles */
+.constitution-section {
+    margin-bottom: 3rem;
+}
+
+.article-title {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.section-content {
+    padding-left: 1.5rem;
+}
+
+.constitution-nav {
+    position: sticky;
+    top: 100px;
+}
+
+.constitution-nav .nav-link {
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.constitution-nav .nav-link.active {
+    color: var(--primary-color);
+    font-weight: bold;
+    border-left: 3px solid var(--primary-color);
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+}
+
+.constitution-nav .nav-link:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.05);
+    transform: translateX(5px);
+}
+
+/* Dark Mode Styles for Constitution */
+[data-theme="dark"] .constitution-section {
+    color: var(--light-color);
+}
+
+[data-theme="dark"] .constitution-nav .nav-link {
+    color: var(--light-color);
+}
+
+[data-theme="dark"] .article-title {
+    border-bottom-color: var(--light-color);
+}
