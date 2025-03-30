@@ -249,49 +249,103 @@
         </div>
     </section>
 
-    <!-- Include the footer from index.html -->
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
 
-    <!-- Add this JavaScript for form handling -->
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Add your form submission logic here
-            // Example:
-            const formData = new FormData(this);
-            
-            // Show loading state
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.innerHTML;
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
-            submitButton.disabled = true;
+                <!-- Resources -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="academic.html">Academic Support</a></li>
+                        <li><a href="scholarships.html">Scholarships</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="blog.html">Blog & News</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
 
-            // Simulate form submission (replace with actual API call)
-            setTimeout(() => {
-                // Show success message
-                alert('Thank you for your message. We will get back to you soon!');
-                
-                // Reset form
-                this.reset();
-                
-                // Restore button state
-                submitButton.innerHTML = originalText;
-                submitButton.disabled = false;
-            }, 1500);
-        });
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Buegema University Campus</li>
+                        <li><i class="fas fa-phone me-2"></i> +256 123 456 789</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@busssa.org</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon - Fri, 9:00 - 17:00</li>
+                    </ul>
+                </div>
 
-        // Form validation
-        const forms = document.querySelectorAll('.needs-validation');
-        Array.from(forms).forEach(form => {
-            form.addEventListener('submit', event => {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    </script>
+                <!-- Newsletter & Social -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Stay Connected</h4>
+                    <p>Subscribe to our newsletter for updates</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donation Section -->
+            <div class="donation-section text-center mt-4">
+                <h4 class="footer-heading">Support Our Mission</h4>
+                <p>Help us empower South Sudanese students through your generous donations</p>
+                <div class="donation-methods">
+                    <a href="#" class="donation-method">
+                        <i class="fab fa-cc-visa"></i>
+                        <span>Credit Card</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fab fa-paypal"></i>
+                        <span>PayPal</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile Money</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fas fa-university"></i>
+                        <span>Bank Transfer</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2024 BUSSSA. All rights reserved. | Designed by <a href="#" class="designer-credit">Sammiepro</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Buttons -->
+    <button id="scrollUp" class="scroll-btn" title="Scroll to top" aria-label="Scroll to top of page">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    <button id="scrollDown" class="scroll-btn" title="Scroll to bottom" aria-label="Scroll to bottom of page">
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+    </button>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
