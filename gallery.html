@@ -8,10 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
+    <link href="styles-enhanced.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/gallery.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Lightbox CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <!-- Masonry CSS -->
+    <link href="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -37,10 +41,10 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-info-circle me-1"></i> About Us
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                             <li><a class="dropdown-item" href="about.html">
                                 <i class="fas fa-book-open me-2"></i> Our Story
                             </a></li>
@@ -53,10 +57,10 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-user-friends me-1"></i> Membership
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                             <li><a class="dropdown-item" href="membership.html">
                                 <i class="fas fa-user-plus me-2"></i> Join Us
                             </a></li>
@@ -74,10 +78,10 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-book-reader me-1"></i> Resources
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                             <li><a class="dropdown-item" href="academic.html">
                                 <i class="fas fa-graduation-cap me-2"></i> Academic Support
                             </a></li>
@@ -142,31 +146,53 @@
     <section class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">Photo Gallery</h2>
-            <div class="row g-4">
-                <!-- Gallery Filters -->
-                <div class="col-12 mb-4">
-                    <div class="d-flex justify-content-center flex-wrap gap-2">
-                        <button class="btn btn-outline-primary active">All</button>
-                        <button class="btn btn-outline-primary">Cultural Events</button>
-                        <button class="btn btn-outline-primary">Academic</button>
-                        <button class="btn btn-outline-primary">Social</button>
-                        <button class="btn btn-outline-primary">Sports</button>
-                    </div>
-                </div>
+            
+            <!-- Gallery Filters -->
+            <div class="gallery-filters">
+                <button class="gallery-filter active" data-filter="all">All</button>
+                <button class="gallery-filter" data-filter="cultural">Cultural Events</button>
+                <button class="gallery-filter" data-filter="academic">Academic</button>
+                <button class="gallery-filter" data-filter="social">Social</button>
+                <button class="gallery-filter" data-filter="sports">Sports</button>
+            </div>
+
+            <!-- Gallery Container -->
+            <div class="gallery-container">
+                <!-- Gallery Sizer for Masonry -->
+                <div class="gallery-sizer"></div>
+                
                 <!-- Gallery Items -->
-                <div class="col-md-4 col-sm-6">
-                    <a href="img/A1.jpg" data-lightbox="gallery" data-title="Cultural Day Celebration">
-                        <div class="gallery-item">
-                            <img src="img/A3.jpg" alt="Cultural Day" class="img-fluid rounded">
-                            <div class="gallery-overlay">
-                                <h5>Cultural Day Celebration</h5>
-                                <p>March 2024</p>
+                <div class="gallery-item" data-category="cultural">
+                    <a href="img/gallery/cultural-1.jpg" data-lightbox="gallery" data-title="Cultural Day Celebration">
+                        <img src="img/gallery/cultural-1-thumb.jpg" alt="Cultural Day" class="lazy" data-src="img/gallery/cultural-1-thumb.jpg">
+                        <div class="gallery-overlay">
+                            <h5>Cultural Day Celebration</h5>
+                            <p>March 2024</p>
+                            <div class="gallery-meta">
+                                <span><i class="fas fa-heart"></i> 245</span>
+                                <span><i class="fas fa-comment"></i> 32</span>
                             </div>
                         </div>
                     </a>
                 </div>
-                <!-- Repeat for other images -->
-                <!-- Add more gallery items here -->
+
+                <!-- Add more gallery items with different categories -->
+                <div class="gallery-item" data-category="academic">
+                    <a href="img/gallery/academic-1.jpg" data-lightbox="gallery" data-title="Academic Excellence Award">
+                        <img src="img/gallery/academic-1-thumb.jpg" alt="Academic Award" class="lazy" data-src="img/gallery/academic-1-thumb.jpg">
+                        <div class="gallery-overlay">
+                            <h5>Academic Excellence Award</h5>
+                            <p>February 2024</p>
+                            <div class="gallery-meta">
+                                <span><i class="fas fa-heart"></i> 189</span>
+                                <span><i class="fas fa-comment"></i> 24</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Load More Trigger -->
+                <div class="load-more-trigger"></div>
             </div>
         </div>
     </section>
@@ -177,17 +203,25 @@
             <h2 class="text-center mb-5">Video Gallery</h2>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
-                    <div class="card">
+                    <div class="card video-card">
                         <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Cultural Performance" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
+                                    title="Cultural Performance" 
+                                    allowfullscreen
+                                    loading="lazy">
+                            </iframe>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Cultural Performance</h5>
                             <p class="card-text">Traditional dance showcase at the annual cultural festival</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 1.2K views</span>
+                                <span><i class="fas fa-thumbs-up"></i> 245</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Add more video items here -->
+                <!-- Add more video items -->
             </div>
         </div>
     </section>
@@ -199,12 +233,11 @@
             <div class="row g-4">
                 <!-- Facebook Feed -->
                 <div class="col-md-4">
-                    <div class="card h-100">
+                    <div class="card h-100 social-card">
                         <div class="card-header bg-primary text-white">
                             <i class="fab fa-facebook me-2"></i>Facebook
                         </div>
                         <div class="card-body">
-                            <!-- Facebook Feed Embed Code -->
                             <div class="fb-page" 
                                 data-href="https://www.facebook.com/BUSSSA"
                                 data-tabs="timeline"
@@ -220,7 +253,7 @@
                 </div>
                 <!-- Instagram Feed -->
                 <div class="col-md-4">
-                    <div class="card h-100">
+                    <div class="card h-100 social-card">
                         <div class="card-header bg-primary text-white">
                             <i class="fab fa-instagram me-2"></i>Instagram
                         </div>
@@ -231,7 +264,7 @@
                 </div>
                 <!-- Twitter Feed -->
                 <div class="col-md-4">
-                    <div class="card h-100">
+                    <div class="card h-100 social-card">
                         <div class="card-header bg-primary text-white">
                             <i class="fab fa-twitter me-2"></i>Twitter
                         </div>
@@ -264,16 +297,12 @@
         </div>
     </section>
 
-    <!-- Bootstrap JS -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Lightbox JS -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <!-- Navigation JS -->
-    <script src="navigation.js"></script>
-    <!-- Custom JavaScript -->
-    <script>
-        // Add any page-specific JavaScript here
-    </script>
+    <script src="js/gallery.js"></script>
     <!-- Facebook SDK -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0"></script>
