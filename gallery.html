@@ -296,6 +296,261 @@
             </div>
         </div>
     </section>
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="academic.html">Academic Support</a></li>
+                        <li><a href="scholarships.html">Scholarships</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="blog.html">Blog & News</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Buegema University Campus</li>
+                        <li><i class="fas fa-phone me-2"></i> +256 123 456 789</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@busssa.org</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon - Fri, 9:00 - 17:00</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter & Social -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-heading">Stay Connected</h4>
+                    <p>Subscribe to our newsletter for updates</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donation Section -->
+            <div class="donation-section text-center mt-4">
+                <h4 class="footer-heading">Support Our Mission</h4>
+                <p>Help us empower South Sudanese students through your generous donations</p>
+                <div class="donation-methods">
+                    <a href="#" class="donation-method">
+                        <i class="fab fa-cc-visa"></i>
+                        <span>Credit Card</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fab fa-paypal"></i>
+                        <span>PayPal</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile Money</span>
+                    </a>
+                    <a href="#" class="donation-method">
+                        <i class="fas fa-university"></i>
+                        <span>Bank Transfer</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2024 BUSSSA. All rights reserved. | Designed by <a href="#" class="designer-credit">Sammiepro</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Buttons -->
+    <button id="scrollUp" class="scroll-btn" title="Scroll to top" aria-label="Scroll to top of page">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    <button id="scrollDown" class="scroll-btn" title="Scroll to bottom" aria-label="Scroll to bottom of page">
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+    </button>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Navigation JS -->
+    <script src="navigation.js"></script>
+    <!-- Form Handling JS -->
+    <script src="js/form-handling.js"></script>
+    
+    <!-- Interactive Features JS -->
+    <script src="js/interactive.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Scroll buttons functionality
+        document.getElementById('scrollUp').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        document.getElementById('scrollDown').addEventListener('click', function() {
+            window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'smooth'
+            });
+        });
+
+        // Show/hide scroll buttons based on scroll position
+        window.addEventListener('scroll', function() {
+            const scrollUp = document.getElementById('scrollUp');
+            const scrollDown = document.getElementById('scrollDown');
+            
+            if (window.scrollY > 300) {
+                scrollUp.style.display = 'flex';
+            } else {
+                scrollUp.style.display = 'none';
+            }
+
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
+                scrollDown.style.display = 'none';
+            } else {
+                scrollDown.style.display = 'flex';
+            }
+        });
+
+        // Initially hide scroll up button
+        document.getElementById('scrollUp').style.display = 'none';
+
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-up animation to elements when they become visible
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(element => {
+            observer.observe(element);
+        });
+
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const icon = darkModeToggle.querySelector('i');
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        setTheme(savedTheme);
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+
+        // Navbar Shrink on Scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-shrink');
+            } else {
+                navbar.classList.remove('navbar-shrink');
+            }
+        });
+
+        // Active Link Highlighting
+        const currentLocation = location.href;
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        navLinks.forEach(link => {
+            if (link.href === currentLocation) {
+                link.classList.add('active');
+            }
+        });
+
+        // Dropdown Hover Effect (for desktop)
+        if (window.innerWidth > 992) {
+            document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+                dropdown.addEventListener('mouseenter', function() {
+                    this.querySelector('.dropdown-menu').classList.add('show');
+                });
+                dropdown.addEventListener('mouseleave', function() {
+                    this.querySelector('.dropdown-menu').classList.remove('show');
+                });
+            });
+        }
+
+        document.querySelectorAll('.card-img-top').forEach(img => {
+            img.classList.add('loading');
+            img.onload = function() {
+                this.classList.remove('loading');
+            }
+        });
+    </script>
+</body>
+</html>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
