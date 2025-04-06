@@ -28,23 +28,23 @@
             </a>
 
             <!-- Mobile Toggle -->
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <!-- Navigation Items -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">
                             <i class="fas fa-home me-1"></i> Home
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-info-circle me-1"></i> About Us
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="aboutDropdown">
                             <li><a class="dropdown-item" href="about.html">
                                 <i class="fas fa-book-open me-2"></i> Our Story
                             </a></li>
@@ -57,10 +57,10 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-user-friends me-1"></i> Membership
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="membershipDropdown">
                             <li><a class="dropdown-item" href="membership.html">
                                 <i class="fas fa-user-plus me-2"></i> Join Us
                             </a></li>
@@ -78,10 +78,10 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-book-reader me-1"></i> Resources
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="resourcesDropdown">
                             <li><a class="dropdown-item" href="academic.html">
                                 <i class="fas fa-graduation-cap me-2"></i> Academic Support
                             </a></li>
