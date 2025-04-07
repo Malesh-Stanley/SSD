@@ -2,203 +2,248 @@
 class GalleryEnhancer {
     constructor() {
         this.galleryContainer = document.querySelector('.gallery-container');
-        this.filterButtons = document.querySelectorAll('.gallery-filter');
         this.galleryItems = document.querySelectorAll('.gallery-item');
-        this.currentFilter = 'all';
+        this.filters = document.querySelectorAll('.gallery-filter');
+        this.loadMoreTrigger = document.querySelector('.load-more-trigger');
+        this.observer = null;
+        this.masonry = null;
         this.init();
     }
 
     init() {
-        // Initialize Masonry layout
-        this.initMasonry();
-        
-        // Initialize lazy loading
-        this.initLazyLoading();
-        
-        // Initialize filtering
-        this.initFiltering();
-        
-        // Initialize lightbox
-        this.initLightbox();
-        
-        // Initialize infinite scroll
-        this.initInfiniteScroll();
-        
-        // Initialize image optimization
-        this.initImageOptimization();
+        this.setupMasonry();
+        this.setupLazyLoading();
+        this.setupFilters();
+        this.setupInfiniteScroll();
+        this.setupLightbox();
+        this.setupImageOptimization();
+        this.setupPerformanceOptimizations();
     }
 
-    initMasonry() {
-        if (this.galleryContainer) {
-            const masonry = new Masonry(this.galleryContainer, {
+    setupMasonry() {
+        if (typeof Masonry !== 'undefined') {
+            this.masonry = new Masonry(this.galleryContainer, {
                 itemSelector: '.gallery-item',
                 columnWidth: '.gallery-sizer',
                 percentPosition: true,
-                gutter: 20
+                gutter: 10,
+                transitionDuration: '0.3s',
+                stagger: 30,
+                initLayout: false
             });
 
-            // Refresh layout after images load
+            // Initialize layout after images are loaded
             imagesLoaded(this.galleryContainer).on('progress', () => {
-                masonry.layout();
+                this.masonry.layout();
             });
         }
     }
 
-    initLazyLoading() {
-        const lazyImages = document.querySelectorAll('img[data-src]');
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    observer.unobserve(img);
-                }
+    setupLazyLoading() {
+        if ('IntersectionObserver' in window) {
+            this.observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        const src = img.dataset.src;
+                        
+                        if (src) {
+                            img.src = src;
+                            img.classList.remove('lazy');
+                            img.classList.add('loaded');
+                            
+                            // Trigger masonry layout after image loads
+                            img.onload = () => {
+                                if (this.masonry) {
+                                    this.masonry.layout();
+                                }
+                            };
+                        }
+                        
+                        this.observer.unobserve(img);
+                    }
+                });
+            }, {
+                rootMargin: '50px 0px',
+                threshold: 0.1
             });
-        });
 
-        lazyImages.forEach(img => imageObserver.observe(img));
+            document.querySelectorAll('.gallery-item img.lazy').forEach(img => {
+                this.observer.observe(img);
+            });
+        }
     }
 
-    initFiltering() {
-        this.filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                this.filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
+    setupFilters() {
+        this.filters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                const category = filter.dataset.filter;
                 
-                // Get filter value
-                this.currentFilter = button.dataset.filter;
+                // Update active state
+                this.filters.forEach(f => f.classList.remove('active'));
+                filter.classList.add('active');
                 
                 // Filter items
-                this.filterItems();
-            });
-        });
-    }
-
-    filterItems() {
-        this.galleryItems.forEach(item => {
-            if (this.currentFilter === 'all' || item.dataset.category === this.currentFilter) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-        
-        // Refresh masonry layout
-        if (this.galleryContainer) {
-            const masonry = Masonry.data(this.galleryContainer);
-            if (masonry) {
-                masonry.layout();
-            }
-        }
-    }
-
-    initLightbox() {
-        // Initialize lightbox with custom options
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true,
-            'albumLabel': 'Image %1 of %2',
-            'fadeDuration': 300,
-            'imageFadeDuration': 300,
-            'disableScrolling': true
-        });
-
-        // Add keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                lightbox.close();
-            }
-        });
-    }
-
-    initInfiniteScroll() {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    this.loadMoreItems();
+                this.galleryItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                        item.classList.add('visible');
+                    } else {
+                        item.style.display = 'none';
+                        item.classList.remove('visible');
+                    }
+                });
+                
+                // Re-layout masonry
+                if (this.masonry) {
+                    this.masonry.layout();
                 }
             });
-        }, {
-            rootMargin: '100px'
         });
+    }
 
-        const loadTrigger = document.querySelector('.load-more-trigger');
-        if (loadTrigger) {
-            observer.observe(loadTrigger);
+    setupInfiniteScroll() {
+        if (this.loadMoreTrigger && 'IntersectionObserver' in window) {
+            const loadMoreObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        this.loadMoreItems();
+                    }
+                });
+            }, {
+                rootMargin: '100px 0px',
+                threshold: 0.1
+            });
+
+            loadMoreObserver.observe(this.loadMoreTrigger);
         }
     }
 
     async loadMoreItems() {
+        // Show loading indicator
+        const loadingIndicator = document.createElement('div');
+        loadingIndicator.className = 'loading-indicator visible';
+        loadingIndicator.textContent = 'Loading more items...';
+        this.galleryContainer.appendChild(loadingIndicator);
+
         try {
-            // Show loading indicator
-            const loadingIndicator = document.createElement('div');
-            loadingIndicator.className = 'loading-indicator';
-            loadingIndicator.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-            this.galleryContainer.appendChild(loadingIndicator);
-
-            // Simulate API call (replace with actual API endpoint)
-            const response = await fetch('/api/gallery/load-more');
-            const newItems = await response.json();
-
-            // Add new items to gallery
-            newItems.forEach(item => {
-                const galleryItem = this.createGalleryItem(item);
-                this.galleryContainer.appendChild(galleryItem);
-            });
-
+            // Simulate API call
+            const newItems = await this.fetchMoreItems();
+            
             // Remove loading indicator
             loadingIndicator.remove();
-
-            // Refresh masonry layout
-            const masonry = Masonry.data(this.galleryContainer);
-            if (masonry) {
-                masonry.layout();
+            
+            // Add new items
+            newItems.forEach(item => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.dataset.category = item.category;
+                galleryItem.innerHTML = `
+                    <a href="${item.image}" data-lightbox="gallery" data-title="${item.title}">
+                        <img src="${item.thumbnail}" alt="${item.title}" class="lazy" data-src="${item.image}">
+                        <div class="gallery-overlay">
+                            <h5>${item.title}</h5>
+                            <p>${item.date}</p>
+                            <div class="gallery-meta">
+                                <span><i class="fas fa-heart"></i> ${item.likes}</span>
+                                <span><i class="fas fa-comment"></i> ${item.comments}</span>
+                            </div>
+                        </div>
+                    </a>
+                `;
+                
+                this.galleryContainer.appendChild(galleryItem);
+                
+                // Observe new images for lazy loading
+                const img = galleryItem.querySelector('img');
+                if (this.observer) {
+                    this.observer.observe(img);
+                }
+            });
+            
+            // Re-layout masonry
+            if (this.masonry) {
+                this.masonry.reloadItems();
+                this.masonry.layout();
             }
         } catch (error) {
             console.error('Error loading more items:', error);
+            loadingIndicator.textContent = 'Error loading items. Please try again.';
         }
     }
 
-    createGalleryItem(item) {
-        const div = document.createElement('div');
-        div.className = 'gallery-item';
-        div.dataset.category = item.category;
-        
-        div.innerHTML = `
-            <a href="${item.fullSize}" data-lightbox="gallery" data-title="${item.title}">
-                <img src="${item.thumbnail}" alt="${item.title}" class="lazy" data-src="${item.thumbnail}">
-                <div class="gallery-overlay">
-                    <h5>${item.title}</h5>
-                    <p>${item.date}</p>
-                    <div class="gallery-meta">
-                        <span><i class="fas fa-heart"></i> ${item.likes}</span>
-                        <span><i class="fas fa-comment"></i> ${item.comments}</span>
-                    </div>
-                </div>
-            </a>
-        `;
-        
-        return div;
+    setupLightbox() {
+        if (typeof lightbox !== 'undefined') {
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'albumLabel': 'Image %1 of %2',
+                'fadeDuration': 300,
+                'imageFadeDuration': 300
+            });
+        }
     }
 
-    initImageOptimization() {
+    setupImageOptimization() {
         // Add responsive image sizes
-        const images = document.querySelectorAll('.gallery-item img');
-        images.forEach(img => {
-            img.sizes = '(max-width: 576px) 100vw, (max-width: 992px) 50vw, 33vw';
-            img.srcset = `
-                ${img.dataset.src}-small.jpg 300w,
-                ${img.dataset.src}-medium.jpg 600w,
-                ${img.dataset.src}-large.jpg 900w
-            `;
+        this.galleryItems.forEach(item => {
+            const img = item.querySelector('img');
+            if (img) {
+                const srcset = `
+                    ${img.dataset.src}?w=300 300w,
+                    ${img.dataset.src}?w=600 600w,
+                    ${img.dataset.src}?w=900 900w
+                `;
+                img.setAttribute('srcset', srcset);
+                img.setAttribute('sizes', '(max-width: 576px) 100vw, (max-width: 992px) 50vw, 33vw');
+            }
+        });
+    }
+
+    setupPerformanceOptimizations() {
+        // Debounce scroll and resize events
+        let timeout;
+        window.addEventListener('scroll', () => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                if (this.masonry) {
+                    this.masonry.layout();
+                }
+            }, 100);
+        });
+
+        window.addEventListener('resize', () => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                if (this.masonry) {
+                    this.masonry.layout();
+                }
+            }, 100);
+        });
+    }
+
+    async fetchMoreItems() {
+        // Simulate API call with timeout
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve([
+                    {
+                        image: 'img/gallery/cultural-2.jpg',
+                        thumbnail: 'img/gallery/cultural-2-thumb.jpg',
+                        title: 'Cultural Festival',
+                        date: 'April 2024',
+                        category: 'cultural',
+                        likes: 156,
+                        comments: 23
+                    },
+                    // Add more sample items as needed
+                ]);
+            }, 1000);
         });
     }
 }
 
-// Initialize gallery enhancements when DOM is loaded
+// Initialize gallery when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new GalleryEnhancer();
 }); 
