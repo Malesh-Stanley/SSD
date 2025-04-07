@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BUSSSA News - Page 3</title>
+    <title>BUSSSA Blog & News - Page 3</title>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="BUSSSA News and Updates - Page 3">
-    <meta name="keywords" content="BUSSSA, news, updates, events, South Sudanese students">
+    <meta name="description" content="Latest news, events, and stories from BUSSSA - Buegema University South Sudanese Students Association">
+    <meta name="keywords" content="BUSSSA news, South Sudanese students, university events, academic updates, cultural activities">
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="BUSSSA News - Page 3">
-    <meta property="og:description" content="Latest news and updates from BUSSSA - Page 3">
-    <meta property="og:image" content="img/image.png">
-    <meta property="og:url" content="https://busssa.org/blog-3.html">
+    <meta property="og:title" content="BUSSSA Blog & News - Page 3">
+    <meta property="og:description" content="Latest news, events, and stories from BUSSSA">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1540575467063-178a50c2df87">
+    <meta property="og:url" content="https://busssa.org/blog-3">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/favicon.png">
     <!-- Google Fonts -->
@@ -22,109 +22,282 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
-    <link href="styles-enhanced.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/accessibility.css">
-    <link rel="stylesheet" href="css/interactive.css">
+    <link href="css/gallery.css" rel="stylesheet">
+    <link href="css/accessibility.css" rel="stylesheet">
+    <link href="css/interactive.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Professional styling */
+        .blog-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1540575467063-178a50c2df87');
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .blog-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .blog-category {
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .blog-date {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        .blog-author {
+            font-size: 0.9rem;
+            color: #495057;
+        }
+        
+        .blog-excerpt {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .pagination .page-link {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin: 0 2px;
+        }
+        
+        .newsletter-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+        }
+        
+        @media (max-width: 768px) {
+            .blog-header {
+                min-height: 300px;
+            }
+            
+            .blog-category {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation (same as other pages) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="z-index: 1030;">
         <!-- ... existing navigation code ... -->
     </nav>
 
-    <!-- Main Content -->
-    <main class="container mt-5 pt-5">
-        <h1 class="text-center mb-5">Latest News - Page 3</h1>
-        
-        <!-- News Grid -->
-        <div class="row g-4">
-            <!-- News Item 1 -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="card h-100">
-                    <img src="img/news/mentorship.jpg" class="card-img-top" alt="Mentorship Program">
-                    <div class="card-body">
-                        <span class="badge bg-primary mb-2">Mentorship</span>
-                        <h3 class="h5">New Mentorship Program</h3>
-                        <p class="text-muted">
-                            <i class="far fa-calendar-alt me-2"></i>March 25, 2024
-                        </p>
-                        <p>Join our new mentorship program connecting students with industry professionals.</p>
-                        <a href="news/mentorship-program.html" class="btn btn-outline-primary btn-sm">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- News Item 2 -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100">
-                    <img src="img/news/research.jpg" class="card-img-top" alt="Research Symposium">
-                    <div class="card-body">
-                        <span class="badge bg-info mb-2">Academic</span>
-                        <h3 class="h5">Research Symposium</h3>
-                        <p class="text-muted">
-                            <i class="far fa-calendar-alt me-2"></i>March 30, 2024
-                        </p>
-                        <p>Present your research at our annual symposium showcasing student work.</p>
-                        <a href="news/research-symposium.html" class="btn btn-outline-primary btn-sm">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- News Item 3 -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100">
-                    <img src="img/news/community.jpg" class="card-img-top" alt="Community Service">
-                    <div class="card-body">
-                        <span class="badge bg-success mb-2">Community</span>
-                        <h3 class="h5">Community Service Day</h3>
-                        <p class="text-muted">
-                            <i class="far fa-calendar-alt me-2"></i>April 5, 2024
-                        </p>
-                        <p>Join us for a day of community service and giving back to the local community.</p>
-                        <a href="news/community-service.html" class="btn btn-outline-primary btn-sm">Read More</a>
+    <!-- Blog Header -->
+    <header class="blog-header text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">BUSSSA Blog & News</h1>
+                    <p class="lead mb-4">Latest updates, stories, and events from our community</p>
+                    <div class="d-flex gap-3">
+                        <a href="#featured" class="btn btn-light btn-lg">Featured Stories</a>
+                        <a href="#latest" class="btn btn-outline-light btn-lg">Latest Posts</a>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
 
-        <!-- Pagination -->
-        <div class="d-flex justify-content-center mt-5">
-            <nav aria-label="Blog pagination">
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="blog-2.html" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="blog.html">1</a></li>
-                    <li class="page-item"><a class="page-link" href="blog-2.html">2</a></li>
-                    <li class="page-item active"><a class="page-link" href="blog-3.html">3</a></li>
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
-                    </li>
-                </ul>
-            </nav>
+    <!-- Featured Post -->
+    <section id="featured" class="py-5">
+        <div class="container">
+            <div class="card border-0 shadow-sm blog-card">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <div style="height: 400px; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87" 
+                                 class="img-fluid h-100 w-100" 
+                                 style="object-fit: cover;"
+                                 alt="Research Symposium"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body p-5">
+                            <div class="mb-3">
+                                <span class="badge bg-primary blog-category">Featured Event</span>
+                                <span class="blog-date ms-3">March 30, 2024</span>
+                            </div>
+                            <h2 class="card-title h2 mb-4">Annual Research Symposium: Showcasing Student Innovation</h2>
+                            <p class="card-text blog-excerpt mb-4">Join us for our annual research symposium where students present their groundbreaking research projects. This year's theme focuses on sustainable development and cultural preservation in South Sudan.</p>
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde" 
+                                     class="rounded-circle me-2" 
+                                     style="width: 40px; height: 40px; object-fit: cover;"
+                                     alt="Author">
+                                <div>
+                                    <p class="blog-author mb-0">By BUSSSA Research Committee</p>
+                                    <small class="text-muted">Research Director</small>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-lg">Read Full Story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Footer (same as other pages) -->
-    <footer class="footer mt-5">
-        <!-- ... existing footer code ... -->
-    </footer>
+    <!-- Blog Posts Grid -->
+    <section id="latest" class="py-5 bg-light">
+        <div class="container">
+            <!-- Categories and Search -->
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn btn-outline-primary active">All Posts</button>
+                        <button class="btn btn-outline-primary">News</button>
+                        <button class="btn btn-outline-primary">Events</button>
+                        <button class="btn btn-outline-primary">Academic</button>
+                        <button class="btn btn-outline-primary">Culture</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search articles...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Scripts -->
+            <!-- Posts Grid -->
+            <div class="row g-4">
+                <!-- Post 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm blog-card">
+                        <div style="height: 250px; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" 
+                                 class="img-fluid h-100 w-100" 
+                                 style="object-fit: cover;"
+                                 alt="Community Service"
+                                 loading="lazy">
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <span class="badge bg-info blog-category">News</span>
+                                <span class="blog-date ms-2">April 5, 2024</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Community Service Day: Making a Difference Together</h3>
+                            <p class="card-text blog-excerpt mb-4">Join us for our annual community service day where we'll be working on various projects to support local communities. Learn about the impact we've made and how you can get involved.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                                <small class="text-muted">4 min read</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm blog-card">
+                        <div style="height: 250px; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" 
+                                 class="img-fluid h-100 w-100" 
+                                 style="object-fit: cover;"
+                                 alt="Cultural Festival"
+                                 loading="lazy">
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <span class="badge bg-success blog-category">Culture</span>
+                                <span class="blog-date ms-2">April 10, 2024</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">South Sudanese Cultural Festival: Celebrating Our Heritage</h3>
+                            <p class="card-text blog-excerpt mb-4">Experience the rich cultural heritage of South Sudan through traditional music, dance, food, and art. Join us for a day of celebration and cultural exchange.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                                <small class="text-muted">5 min read</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm blog-card">
+                        <div style="height: 250px; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87" 
+                                 class="img-fluid h-100 w-100" 
+                                 style="object-fit: cover;"
+                                 alt="Academic Workshop"
+                                 loading="lazy">
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <span class="badge bg-warning text-dark blog-category">Academic</span>
+                                <span class="blog-date ms-2">April 15, 2024</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Academic Writing Workshop: Enhancing Research Skills</h3>
+                            <p class="card-text blog-excerpt mb-4">Join our academic writing workshop to improve your research and writing skills. Learn from experienced faculty members and get tips for successful academic publishing.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="btn btn-link text-primary p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                                <small class="text-muted">3 min read</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="d-flex justify-content-center mt-5">
+                <nav aria-label="Blog pagination">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="blog-2.html">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="blog.html">1</a></li>
+                        <li class="page-item"><a class="page-link" href="blog-2.html">2</a></li>
+                        <li class="page-item active"><a class="page-link" href="blog-3.html">3</a></li>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter-section py-5 text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="h1 mb-4">Stay Updated with BUSSSA</h2>
+                    <p class="lead mb-4">Subscribe to our newsletter for the latest news, events, and stories from our community</p>
+                    <form class="row g-2 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email address">
+                        </div>
+                        <div class="col-md-auto">
+                            <button type="submit" class="btn btn-light btn-lg">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/interactive.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-    </script>
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
 </body>
 </html> 
