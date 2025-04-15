@@ -290,151 +290,125 @@
             </div>
         </div>
     </section>
-   <!-- Footer -->
-   <footer class="footer">
-    <div class="container">
-        <div class="row">
-            <!-- Quick Links -->
-            <div class="col-lg-3 col-md-6 footer-section">
-                <h4 class="footer-heading">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="membership.html">Membership</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
 
-            <!-- Resources -->
-            <div class="col-lg-3 col-md-6 footer-section">
-                <h4 class="footer-heading">Resources</h4>
-                <ul class="footer-links">
-                    <li><a href="academic.html">Academic Support</a></li>
-                    <li><a href="blog.html">Blog & News</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="#">Student Guidelines</a></li>
-                    <li><a href="#">FAQs</a></li>
-                </ul>
-            </div>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BUSSSA</title>
+    <!-- Bootstrap CSS (Fixed URL) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/image.png" alt="BUSSSA Logo" height="40" class="me-2">
+                <span>BUSSSA</span>
+            </a>
 
-            <!-- Contact Info -->
-            <div class="col-lg-3 col-md-6 footer-section">
-                <h4 class="footer-heading">Contact Info</h4>
-                <ul class="footer-links">
-                    <li><i class="fas fa-map-marker-alt me-2"></i> Buegema University Campus</li>
-                    <li><i class="fas fa-phone me-2"></i> +256 123 456 789</li>
-                    <li><i class="fas fa-envelope me-2"></i> info@busssa.org</li>
-                    <li><i class="fas fa-clock me-2"></i> Mon - Fri, 9:00 - 17:00</li>
-                </ul>
-            </div>
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <!-- Newsletter & Social -->
-            <div class="col-lg-3 col-md-6 footer-section">
-                <h4 class="footer-heading">Stay Connected</h4>
-                <p>Subscribe to our newsletter for updates</p>
-                <form class="mb-3">
-                    <div class="input-group">
-                        <input type="email" class="form-control" placeholder="Your email">
-                        <button class="btn btn-primary" type="submit">Subscribe</button>
-                    </div>
-                </form>
-                <div class="social-links">
-                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-info-circle me-1"></i> About Us
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item active" href="about.html">
+                                <i class="fas fa-book-open me-2"></i> Our Story
+                            </a></li>
+                            <li><a class="dropdown-item" href="team.html">
+                                <i class="fas fa-users me-2"></i> Our Team
+                            </a></li>
+                            <li><a class="dropdown-item" href="constitution.html">
+                                <i class="fas fa-file-alt me-2"></i> Constitution
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="membership.html" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-friends me-1"></i> Membership
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="membership.html">
+                                <i class="fas fa-user-plus me-2"></i> Join Us
+                            </a></li>
+                            <li><a class="dropdown-item" href="benefits.html">
+                                <i class="fas fa-gift me-2"></i> Benefits
+                            </a></li>
+                            <li><a class="dropdown-item" href="alumni.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Alumni
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">
+                            <i class="fas fa-calendar-alt me-1"></i> Events
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-book-reader me-1"></i> Resources
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="academic.html">
+                                <i class="fas fa-graduation-cap me-2"></i> Academic Support
+                            </a></li>
+                            <li><a class="dropdown-item" href="blog.html">
+                                <i class="fas fa-blog me-2"></i> Blog & News
+                            </a></li>
+                            <li><a class="dropdown-item" href="gallery.html">
+                                <i class="fas fa-images me-2"></i> Gallery
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-1"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Right Side Items -->
+                <div class="d-flex align-items-center">
+                    <!-- Search Form -->
+                    <form class="search-form me-3 d-none d-md-block">
+                        <div class="input-group">
+                            <input class="form-control form-control-sm" type="search" placeholder="Search...">
+                            <button class="btn btn-outline-light btn-sm" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Member Login -->
+                    <a href="portal.html" class="nav-link member-login-btn">
+                        <i class="fas fa-user me-1"></i> Member Login
+                    </a>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="btn btn-link nav-link ms-2" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
                 </div>
             </div>
         </div>
-
-        <!-- Donation Section -->
-        <div class="donation-section text-center mt-4">
-            <h4 class="footer-heading">Support Our Mission</h4>
-            <p>Help us empower South Sudanese students through your generous donations</p>
-            <div class="donation-methods">
-                <a href="#" class="donation-method">
-                    <i class="fab fa-cc-visa"></i>
-                    <span>Credit Card</span>
-                </a>
-                <a href="#" class="donation-method">
-                    <i class="fab fa-paypal"></i>
-                    <span>PayPal</span>
-                </a>
-                <a href="#" class="donation-method">
-                    <i class="fas fa-mobile-alt"></i>
-                    <span>Mobile Money</span>
-                </a>
-                <a href="#" class="donation-method">
-                    <i class="fas fa-university"></i>
-                    <span>Bank Transfer</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <p>© 2024 BUSSSA. All rights reserved. | Designed by <a href="#" class="designer-credit">Sammiepro</a></p>
-        </div>
-    </div>
-</footer>
-
-<!-- Scroll Buttons -->
-<button id="scrollUp" class="scroll-btn" title="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-</button>
-<button id="scrollDown" class="scroll-btn" title="Scroll to bottom">
-    <i class="fas fa-chevron-down"></i>
-</button>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Navigation JS -->
-<script src="navigation.js"></script>
-<!-- Custom JavaScript -->
-<script>
-    // Scroll buttons functionality
-    document.getElementById('scrollUp').addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    document.getElementById('scrollDown').addEventListener('click', function() {
-        window.scrollTo({
-            top: document.documentElement.scrollHeight,
-            behavior: 'smooth'
-        });
-    });
-
-    // Show/hide scroll buttons based on scroll position
-    window.addEventListener('scroll', function() {
-        const scrollUp = document.getElementById('scrollUp');
-        const scrollDown = document.getElementById('scrollDown');
-        
-        if (window.scrollY > 300) {
-            scrollUp.style.display = 'flex';
-        } else {
-            scrollUp.style.display = 'none';
-        }
-
-        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
-            scrollDown.style.display = 'none';
-        } else {
-            scrollDown.style.display = 'flex';
-        }
-    });
-
-    // Initially hide scroll up button
-    document.getElementById('scrollUp').style.display = 'none';
-</script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Navigation JS -->
-    <script src="navigation.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="main.js"></script>
-</body>
-</html>
+    </nav>
