@@ -35,13 +35,19 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
                             <i class="fas fa-info-circle me-1"></i> About Us
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="about.html">Our Story</a></li>
-                            <li><a class="dropdown-item" href="team.html">Our Team</a></li>
-                            <li><a class="dropdown-item" href="constitution.html">Constitution</a></li>
+                            <li><a class="dropdown-item active" href="about.html">
+                                <i class="fas fa-book-open me-2"></i> Our Story
+                            </a></li>
+                            <li><a class="dropdown-item" href="team.html">
+                                <i class="fas fa-users me-2"></i> Our Team
+                            </a></li>
+                            <li><a class="dropdown-item" href="constitution.html">
+                                <i class="fas fa-file-alt me-2"></i> Constitution
+                            </a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -513,17 +519,6 @@
 
     // Initialize
     document.getElementById('scrollUp').style.display = 'none';
-
-    // Enable dropdowns on touch devices
-    document.querySelectorAll('.dropdown-toggle').forEach(function (dropdown) {
-        dropdown.addEventListener('click', function (e) {
-            if (window.innerWidth < 992) { // Adjust breakpoint as needed
-                e.preventDefault();
-                const menu = this.nextElementSibling;
-                menu.classList.toggle('show');
-            }
-        });
-    });
 </script>
 </body>
 </html>
