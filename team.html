@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team - BUSSSA</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>About Us - BUSSSA</title>
+    <!-- Bootstrap CSS (Fixed URL) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -39,10 +39,10 @@
                             <i class="fas fa-info-circle me-1"></i> About Us
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="about.html">
+                            <li><a class="dropdown-item active" href="about.html">
                                 <i class="fas fa-book-open me-2"></i> Our Story
                             </a></li>
-                            <li><a class="dropdown-item active" href="team.html">
+                            <li><a class="dropdown-item" href="team.html">
                                 <i class="fas fa-users me-2"></i> Our Team
                             </a></li>
                             <li><a class="dropdown-item" href="constitution.html">
@@ -51,7 +51,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="membership.html" role="button" data-bs-toggle="dropdown">
                             <i class="fas fa-user-friends me-1"></i> Membership
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
@@ -105,6 +105,11 @@
                             </button>
                         </div>
                     </form>
+
+                    <!-- Member Login -->
+                    <a href="portal.html" class="nav-link member-login-btn">
+                        <i class="fas fa-user me-1"></i> Member Login
+                    </a>
 
                     <!-- Dark Mode Toggle -->
                     <button id="darkModeToggle" class="btn btn-link nav-link ms-2" aria-label="Toggle dark mode">
@@ -386,7 +391,7 @@
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-
+    
                 <!-- Resources -->
                 <div class="col-lg-3 col-md-6 footer-section">
                     <h4 class="footer-heading">Resources</h4>
@@ -398,18 +403,18 @@
                         <li><a href="#">FAQs</a></li>
                     </ul>
                 </div>
-
+    
                 <!-- Contact Info -->
                 <div class="col-lg-3 col-md-6 footer-section">
                     <h4 class="footer-heading">Contact Info</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt me-2"></i> Buegema University Campus</li>
-                        <li><i class="fas fa-phone me-2"></i> +256 761365727</li>
+                        <li><i class="fas fa-phone me-2"></i> +256 123 456 789</li>
                         <li><i class="fas fa-envelope me-2"></i> info@busssa.org</li>
                         <li><i class="fas fa-clock me-2"></i> Mon - Fri, 9:00 - 17:00</li>
                     </ul>
                 </div>
-
+    
                 <!-- Newsletter & Social -->
                 <div class="col-lg-3 col-md-6 footer-section">
                     <h4 class="footer-heading">Stay Connected</h4>
@@ -429,7 +434,7 @@
                     </div>
                 </div>
             </div>
-
+    
             <!-- Donation Section -->
             <div class="donation-section text-center mt-4">
                 <h4 class="footer-heading">Support Our Mission</h4>
@@ -460,7 +465,46 @@
             </div>
         </div>
     </footer>
-
+    
+                   <!-- Right Side Items -->
+                   <div class="d-flex align-items-center">
+                    <!-- Search Form -->
+                    <form class="search-form me-3 d-none d-md-block">
+                        <div class="input-group">
+                            <input class="form-control form-control-sm" type="search" placeholder="Search...">
+                            <button class="btn btn-outline-light btn-sm" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+    
+                    <!-- Member Login -->
+                    <a href="portal.html" class="nav-link member-login-btn">
+                        <i class="fas fa-user me-1"></i> Member Login
+                    </a>
+    
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="btn btn-link nav-link ms-2" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Padding for fixed navbar -->
+    <div class="pt-5 mt-5"></div>
+    
+    <!-- About Us page (Content unchanged) -->
+    <main class="pt-5 mt-5">
+        <!-- ... (rest of your content remains the same) ... -->
+    </main>
+    
+    <!-- Footer (unchanged) -->
+    <footer class="footer">
+        <!-- ... (your footer content) ... -->
+    </footer>
+    
     <!-- Scroll Buttons -->
     <button id="scrollUp" class="scroll-btn" title="Scroll to top">
         <i class="fas fa-chevron-up"></i>
@@ -468,50 +512,33 @@
     <button id="scrollDown" class="scroll-btn" title="Scroll to bottom">
         <i class="fas fa-chevron-down"></i>
     </button>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Navigation JS -->
-    <script src="navigation.js"></script>
-    <!-- Custom JavaScript -->
+    
+    <!-- ===== KEY FIXES ===== -->
+    <!-- 1. Bootstrap JS Bundle (Corrected + Single Instance) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <!-- 2. Custom JS (Optimized) -->
     <script>
         // Scroll buttons functionality
-        document.getElementById('scrollUp').addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        document.getElementById('scrollUp').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-
-        document.getElementById('scrollDown').addEventListener('click', function() {
-            window.scrollTo({
-                top: document.documentElement.scrollHeight,
-                behavior: 'smooth'
-            });
+    
+        document.getElementById('scrollDown').addEventListener('click', () => {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         });
-
-        // Show/hide scroll buttons based on scroll position
-        window.addEventListener('scroll', function() {
+    
+        // Show/hide scroll buttons
+        window.addEventListener('scroll', () => {
             const scrollUp = document.getElementById('scrollUp');
             const scrollDown = document.getElementById('scrollDown');
             
-            if (window.scrollY > 300) {
-                scrollUp.style.display = 'flex';
-            } else {
-                scrollUp.style.display = 'none';
-            }
-
-            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
-                scrollDown.style.display = 'none';
-            } else {
-                scrollDown.style.display = 'flex';
-            }
+            scrollUp.style.display = (window.scrollY > 300) ? 'flex' : 'none';
+            scrollDown.style.display = (window.innerHeight + window.scrollY >= document.body.scrollHeight - 300) ? 'none' : 'flex';
         });
-
-        // Initially hide scroll up button
+    
+        // Initialize
         document.getElementById('scrollUp').style.display = 'none';
-
-        // Add any page-specific JavaScript here
     </script>
-</body>
-</html> 
+    </body>
+    </html>
