@@ -446,6 +446,45 @@
     </div>
 </footer>
 
+               <!-- Right Side Items -->
+               <div class="d-flex align-items-center">
+                <!-- Search Form -->
+                <form class="search-form me-3 d-none d-md-block">
+                    <div class="input-group">
+                        <input class="form-control form-control-sm" type="search" placeholder="Search...">
+                        <button class="btn btn-outline-light btn-sm" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Member Login -->
+                <a href="portal.html" class="nav-link member-login-btn">
+                    <i class="fas fa-user me-1"></i> Member Login
+                </a>
+
+                <!-- Dark Mode Toggle -->
+                <button id="darkModeToggle" class="btn btn-link nav-link ms-2" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Padding for fixed navbar -->
+<div class="pt-5 mt-5"></div>
+
+<!-- About Us page (Content unchanged) -->
+<main class="pt-5 mt-5">
+    <!-- ... (rest of your content remains the same) ... -->
+</main>
+
+<!-- Footer (unchanged) -->
+<footer class="footer">
+    <!-- ... (your footer content) ... -->
+</footer>
+
 <!-- Scroll Buttons -->
 <button id="scrollUp" class="scroll-btn" title="Scroll to top">
     <i class="fas fa-chevron-up"></i>
@@ -454,51 +493,32 @@
     <i class="fas fa-chevron-down"></i>
 </button>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Navigation JS -->
-<script src="navigation.js"></script>
-<!-- Custom JavaScript -->
+<!-- ===== KEY FIXES ===== -->
+<!-- 1. Bootstrap JS Bundle (Corrected + Single Instance) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+<!-- 2. Custom JS (Optimized) -->
 <script>
     // Scroll buttons functionality
-    document.getElementById('scrollUp').addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+    document.getElementById('scrollUp').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    document.getElementById('scrollDown').addEventListener('click', function() {
-        window.scrollTo({
-            top: document.documentElement.scrollHeight,
-            behavior: 'smooth'
-        });
+    document.getElementById('scrollDown').addEventListener('click', () => {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     });
 
-    // Show/hide scroll buttons based on scroll position
-    window.addEventListener('scroll', function() {
+    // Show/hide scroll buttons
+    window.addEventListener('scroll', () => {
         const scrollUp = document.getElementById('scrollUp');
         const scrollDown = document.getElementById('scrollDown');
         
-        if (window.scrollY > 300) {
-            scrollUp.style.display = 'flex';
-        } else {
-            scrollUp.style.display = 'none';
-        }
-
-        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
-            scrollDown.style.display = 'none';
-        } else {
-            scrollDown.style.display = 'flex';
-        }
+        scrollUp.style.display = (window.scrollY > 300) ? 'flex' : 'none';
+        scrollDown.style.display = (window.innerHeight + window.scrollY >= document.body.scrollHeight - 300) ? 'none' : 'flex';
     });
 
-    // Initially hide scroll up button
+    // Initialize
     document.getElementById('scrollUp').style.display = 'none';
 </script>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="main.js"></script>
 </body>
-</html> 
+</html>
