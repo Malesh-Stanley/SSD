@@ -12,21 +12,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-     <!-- Navigation -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
-            <!-- Brand -->
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="img/image.png" alt="BUSSSA Logo" height="40" class="me-2">
                 <span>BUSSSA</span>
             </a>
-
-            <!-- Mobile Toggle -->
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Navigation Items -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
@@ -35,14 +30,14 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-info-circle me-1"></i> About Us
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item active" href="about.html">
+                            <li><a class="dropdown-item" href="about.html">
                                 <i class="fas fa-book-open me-2"></i> Our Story
                             </a></li>
-                            <li><a class="dropdown-item" href="team.html">
+                            <li><a class="dropdown-item active" href="team.html">
                                 <i class="fas fa-users me-2"></i> Our Team
                             </a></li>
                             <li><a class="dropdown-item" href="constitution.html">
@@ -51,7 +46,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="membership.html" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-user-friends me-1"></i> Membership
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
@@ -72,10 +67,10 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-book-reader me-1"></i> Resources
                         </a>
-                
+                        <ul class="dropdown-menu dropdown-menu-dark">
                             <li><a class="dropdown-item" href="blog.html">
                                 <i class="fas fa-blog me-2"></i> Blog & News
                             </a></li>
@@ -90,27 +85,10 @@
                         </a>
                     </li>
                 </ul>
-
-                <!-- Right Side Items -->
-                <div class="d-flex align-items-center">
-                    <!-- Search Form -->
-                    <form class="search-form me-3 d-none d-md-block">
-                        <div class="input-group">
-                            <input class="form-control form-control-sm" type="search" placeholder="Search...">
-                            <button class="btn btn-outline-light btn-sm" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </form>
-
-                    <!-- Dark Mode Toggle -->
-                    <button id="darkModeToggle" class="btn btn-link nav-link ms-2" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </div>
             </div>
         </div>
     </nav>
+
     <!-- Add padding to account for fixed navbar -->
     <div class="pt-5 mt-5"></div>
 
