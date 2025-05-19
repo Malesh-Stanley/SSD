@@ -3,13 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - BUSSSA</title>
-    <!-- Bootstrap CSS (Fixed URL) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Media Gallery - BUSSSA</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .gallery-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/gallery-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-filter {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid var(--bs-primary);
+            border-radius: 30px;
+            background: transparent;
+            color: var(--bs-primary);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-filter:hover,
+        .gallery-filter.active {
+            background: var(--bs-primary);
+            color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 1.5rem;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .video-gallery {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+
+        .video-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-card .card-body {
+            padding: 1.5rem;
+        }
+
+        .video-meta {
+            display: flex;
+            gap: 1rem;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -123,37 +243,36 @@
     <!-- Add padding to account for fixed navbar -->
     <div class="pt-5 mt-5"></div>
 
-    <!-- Gallery Header -->
-    <header class="bg-primary text-white py-5">
-        <div class="container">
-            <h1 class="display-4">Media Gallery</h1>
-            <p class="lead">Capturing moments and memories of our community</p>
+    <!-- Gallery Hero -->
+    <header class="gallery-hero">
+        <div class="container text-center text-white">
+            <h1 class="display-4 fw-bold mb-4" data-aos="fade-up">Media Gallery</h1>
+            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Explore our vibrant community through captivating moments and memories</p>
+            <div class="gallery-cta" data-aos="fade-up" data-aos-delay="200">
+                <a href="#gallery" class="btn btn-light btn-lg me-3">View Gallery</a>
+                <a href="#videos" class="btn btn-outline-light btn-lg">Watch Videos</a>
+            </div>
         </div>
     </header>
 
     <!-- Photo Gallery -->
-    <section class="py-5">
+    <section id="gallery" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Photo Gallery</h2>
-            
             <!-- Gallery Filters -->
-            <div class="gallery-filters">
-                <button class="gallery-filter active" data-filter="all">All</button>
+            <div class="gallery-filters" data-aos="fade-up">
+                <button class="gallery-filter active" data-filter="all">All Media</button>
                 <button class="gallery-filter" data-filter="cultural">Cultural Events</button>
                 <button class="gallery-filter" data-filter="academic">Academic</button>
                 <button class="gallery-filter" data-filter="social">Social</button>
                 <button class="gallery-filter" data-filter="sports">Sports</button>
             </div>
 
-            <!-- Gallery Container -->
-            <div class="gallery-container">
-                <!-- Gallery Sizer for Masonry -->
-                <div class="gallery-sizer"></div>
-                
-                <!-- Gallery Items -->
-                <div class="gallery-item" data-category="cultural">
-                    <a href="img/cultral1.jpg" data-lightbox="gallery" data-title="Cultural Day Celebration">
-                        <img src="img/cultral1.jpg" alt="Cultural Day" class="lazy" data-src="img/cultral1.jpg">
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Cultural Event -->
+                <div class="gallery-item" data-category="cultural" data-aos="fade-up">
+                    <a href="img/cultral1.jpg" data-lightbox="gallery" data-title="Cultural Day Celebration - March 2024">
+                        <img src="img/cultral1.jpg" alt="Cultural Day Celebration" loading="lazy">
                         <div class="gallery-overlay">
                             <h5>Cultural Day Celebration</h5>
                             <p>March 2024</p>
@@ -165,10 +284,10 @@
                     </a>
                 </div>
 
-                <!-- Add more gallery items with different categories -->
-                <div class="gallery-item" data-category="academic">
-                    <a href="img/ee.jpg" data-lightbox="gallery" data-title="Academic Excellence Award">
-                        <img src="img/ee.jpg" alt="Academic Award" class="lazy" data-src="img/ee.jpg">
+                <!-- Academic Event -->
+                <div class="gallery-item" data-category="academic" data-aos="fade-up" data-aos-delay="100">
+                    <a href="img/ee.jpg" data-lightbox="gallery" data-title="Academic Excellence Award - February 2024">
+                        <img src="img/ee.jpg" alt="Academic Excellence Award" loading="lazy">
                         <div class="gallery-overlay">
                             <h5>Academic Excellence Award</h5>
                             <p>February 2024</p>
@@ -180,19 +299,18 @@
                     </a>
                 </div>
 
-                <!-- Load More Trigger -->
-                <div class="load-more-trigger"></div>
+                <!-- Add more gallery items here -->
             </div>
         </div>
     </section>
 
     <!-- Video Gallery -->
-    <section class="py-5 bg-light">
+    <section class="video-gallery">
         <div class="container">
-            <h2 class="text-center mb-5">Video Gallery</h2>
+            <h2 class="text-center mb-5" data-aos="fade-up">Featured Videos</h2>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card video-card">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="video-card">
                         <div class="ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
                                     title="Cultural Performance" 
@@ -210,7 +328,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Add more video items -->
+                <!-- Add more video cards here -->
             </div>
         </div>
     </section>
@@ -375,79 +493,42 @@
         </div>
     </footer>
     
-                   <!-- Right Side Items -->
-                   <div class="d-flex align-items-center">
-                    <!-- Search Form -->
-                    <form class="search-form me-3 d-none d-md-block">
-                        <div class="input-group">
-                            <input class="form-control form-control-sm" type="search" placeholder="Search...">
-                            <button class="btn btn-outline-light btn-sm" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </form>
-    
-                    <!-- Member Login -->
-                    <a href="portal.html" class="nav-link member-login-btn">
-                        <i class="fas fa-user me-1"></i> Member Login
-                    </a>
-    
-                    <!-- Dark Mode Toggle -->
-                    <button id="darkModeToggle" class="btn btn-link nav-link ms-2" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Padding for fixed navbar -->
-    <div class="pt-5 mt-5"></div>
-    
-    <!-- About Us page (Content unchanged) -->
-    <main class="pt-5 mt-5">
-        <!-- ... (rest of your content remains the same) ... -->
-    </main>
-    
-    <!-- Footer (unchanged) -->
-    <footer class="footer">
-        <!-- ... (your footer content) ... -->
-    </footer>
-    
-    <!-- Scroll Buttons -->
-    <button id="scrollUp" class="scroll-btn" title="Scroll to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-    <button id="scrollDown" class="scroll-btn" title="Scroll to bottom">
-        <i class="fas fa-chevron-down"></i>
-    </button>
-    
-    <!-- ===== KEY FIXES ===== -->
-    <!-- 1. Bootstrap JS Bundle (Corrected + Single Instance) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    
-    <!-- 2. Custom JS (Optimized) -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Scroll buttons functionality
-        document.getElementById('scrollUp').addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
         });
-    
-        document.getElementById('scrollDown').addEventListener('click', () => {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
+        // Gallery Filtering
+        document.querySelectorAll('.gallery-filter').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.gallery-filter').forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filter = button.getAttribute('data-filter');
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
         });
-    
-        // Show/hide scroll buttons
-        window.addEventListener('scroll', () => {
-            const scrollUp = document.getElementById('scrollUp');
-            const scrollDown = document.getElementById('scrollDown');
-            
-            scrollUp.style.display = (window.scrollY > 300) ? 'flex' : 'none';
-            scrollDown.style.display = (window.innerHeight + window.scrollY >= document.body.scrollHeight - 300) ? 'none' : 'flex';
+
+        // Lightbox Configuration
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'albumLabel': 'Image %1 of %2'
         });
-    
-        // Initialize
-        document.getElementById('scrollUp').style.display = 'none';
     </script>
-    </body>
-    </html>
+</body>
+</html>
